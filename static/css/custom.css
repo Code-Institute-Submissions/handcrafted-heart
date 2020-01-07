@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya&display=swap');
+
 body {
-    font-family: Arial;
+    font-family: 'Alegreya', serif;
     padding-top: 50px;
 }
 
