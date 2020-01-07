@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">AuthenticateMe</a>
+                <a class="navbar-brand" href="/">Handcrafted heart</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -38,6 +38,18 @@
                         <li><a href="{% url 'register' %}">Register</a></li>
                         <li><a href="{% url 'login' %}">Log In</a></li>
                     {% endif %}
+                    
+                <!-- This will put a link into the navigation bar,
+                     so the user can check which items are currently in the shopping cart,
+                     and also show if there are any products in it at all, or not. -->  
+                    <li>
+                        <a href="{% url 'view_cart' %}">
+                            <i class="fa fa-shipping-cart"></i>Cart
+                            {% if product_count > 0 %}
+                            <label class="badge badge-warning">{{ product_count }}</label>
+                            {% endif %}
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -52,7 +64,14 @@
         </div>
     {% endif %}
     
+   <!-- The form for the search box -->
    <div class="container">
+       <div class="display">
+            <form action="{% url 'search' %}" method="get">
+                <input type="text" name="q">
+                <button type="search">Search</button>
+            </form>
+        </div>
         {% block content %} {% endblock %}
     </div>
     
