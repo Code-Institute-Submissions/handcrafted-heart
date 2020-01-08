@@ -14,6 +14,12 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required()
 def checkout(request):
+    """
+    A view to ensure that payment information is being handled 
+    by stripe correctly, so that the user will be able to purchase 
+    items. The view renders the html page
+    and pass in the forms and contents of the cart. 
+    """
     if request.method == "POST":
         order_form = NewOrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
@@ -37,20 +43,41 @@ def checkout(request):
                 )
                 order_item.save()
                 
-        # a try except that will create a customer charge, using Stripe's in-built API.
-        try:
-            customer = stripe.Charge.create(
-                amount=int(total * 100),
-                currency="EUR",
-                description=request.user.email,
-                card=payment_form.cleaned_data['stripe_id']
-            )
-        # If the card is being declined.    
-        except stripe.error.CardError:
-                messages.error(request, "Your card was declined!")
+            # a try except that will create a customer charge, using Stripe's in-built API.
+            try:
+                customer = stripe.Charge.create(
+                    amount=int(total * 100),
+                    currency="EUR",
+                    description=request.user.email,
+                    card=payment_form.cleaned_data['stripe_id']
+                )
                 
-        # if the customer have paid.        
-        if customer.paid:
-                messages.error(request, "You have successfully paid")
-                request.session['cart'] = {}
-                return redirect(reverse('products'))
+            # If the card is being declined.    
+            except stripe.error.CardError:
+                    messages.error(request, "Your card was declined!")
+                
+            # if the customer have paid, request the cart from the current session.        
+            if customer.paid:
+                    messages.error(request, "You have successfully paid")
+                    request.session['cart'] = {}
+                    return redirect(reverse('products'))
+                    
+            # if the user have not paid.
+            else:
+                   messages.error(request, "We were unable to take your payment at this time")
+                   
+        # if any payment form errors occurs.
+        else:
+               print(payment_form.errors)
+               messages.error(request, "We were unable to take a payment from this card")
+    
+    # return a payment form and an order form as blank.
+    else:
+        payment_form = MakePaymentForm()
+        order_form = OrderForm()
+    
+    # return the checkout html with an order form, a payment form, and a publishable key for Stripe, 
+    # available on the HTML page when the user clicks on checkout.
+    return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})
+
+    
