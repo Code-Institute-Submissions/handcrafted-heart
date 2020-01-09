@@ -54,7 +54,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 ## Technologies Used
 #### Languages
 * [HTML](https://www.w3schools.com/html/html5_intro.asp), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) 
-* [Python](https://www.python.org/download/releases/3.0/) and [Django]()
+* [Python](https://www.python.org/download/releases/3.0/) and [Django](https://www.djangoproject.com/) as the framework.
 
 #### Libraries
 * [Google Fonts](https://fonts.google.com/) is used to style the fonts of the website.
@@ -70,6 +70,10 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * the database
 * [Balsamiq](https://balsamiq.com/) to create my wireframes as a part of the design process, with a simple yet goodlooking result.
 * [Responsinator](http://www.responsinator.com/) was used to check the responsiveness of the page, and also [Responsivedesign](http://ami.responsivedesign.is/) for this.
+* [Stripe](https://stripe.com/en-se) was used as the payment platform to validate and accept credit card payments in a secure way.
+* [AWS S3 Bucket]() to store images that was entered into the database.
+* 
+*
 
 ## Information Architecture
 * The database structure..
