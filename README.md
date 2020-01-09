@@ -71,9 +71,13 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * [Balsamiq](https://balsamiq.com/) to create my wireframes as a part of the design process, with a simple yet goodlooking result.
 * [Responsinator](http://www.responsinator.com/) was used to check the responsiveness of the page, and also [Responsivedesign](http://ami.responsivedesign.is/) for this.
 * [Stripe](https://stripe.com/en-se) was used as the payment platform to validate and accept credit card payments in a secure way.
-* [AWS S3 Bucket]() to store images that was entered into the database.
+* [AWS S3 Bucket](https://aws.amazon.com/s3/) to store images that was entered into the database.
 * 
 *
+
+#### Databases
+* [PostgreSQL] was used for production database, which is provided by heroku.
+* [SQlite3] was used for development database, which is provided by django.
 
 ## Information Architecture
 * The database structure..
