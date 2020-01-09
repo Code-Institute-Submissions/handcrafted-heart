@@ -2,9 +2,16 @@
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
-<!-- contains JavaScript that Stripe requires -->
-{% block head_js %}
 
+<!-- contains the JavaScript that Stripe requires -->
+{% block head_js %}
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    //<![CDATA[
+        Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
 {% endblock %}
 
 
