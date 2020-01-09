@@ -6,7 +6,7 @@ class MakePaymentForm(forms.Form):
     Payment form with payment details that the user have to insert to be able to checkout.
     """
     
-    MONTH_CHOICES = [(i, i) for i in range(1, 12)]
+    MONTH_CHOICES = [(i, i) for i in range(1, 13)]
     YEAR_CHOICES = [(i, i) for i in range(2020, 2037)]
 
     credit_card_number = forms.CharField(label='Credit card number', required=False)
