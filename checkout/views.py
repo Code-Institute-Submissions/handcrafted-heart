@@ -74,7 +74,7 @@ def checkout(request):
     # return a payment form and an order form as blank.
     else:
         payment_form = MakePaymentForm()
-        order_form = OrderForm()
+        order_form = NewOrderForm()
     
     # return the checkout html with an order form, a payment form, and a publishable key for Stripe, 
     # available on the HTML page when the user clicks on checkout.
