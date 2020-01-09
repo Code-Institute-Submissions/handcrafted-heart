@@ -76,8 +76,8 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 *
 
 #### Databases
-* [PostgreSQL] was used for production database, which is provided by heroku.
-* [SQlite3] was used for development database, which is provided by django.
+* [PostgreSQL](https://www.postgresql.org/) was used for production database, which is provided by heroku.
+* [SQlite3](https://www.sqlite.org/index.html) was used for development database, which is provided by django.
 
 ## Information Architecture
 * The database structure..
