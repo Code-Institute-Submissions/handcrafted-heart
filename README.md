@@ -174,7 +174,7 @@ SECRET_KEY: <your_secret_key>
 *  
 
 ### Media
-* The images of the products are gathered from this page (e.g Unspalsh) following their guidelines.
+* On this webpage I´m using photos from [Unsplash](https://unsplash.com/), according to their [Unsplash licence](https://unsplash.com/license).
 * 
 
 ### Acknowledgements
