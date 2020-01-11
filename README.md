@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/LivHed/handcrafted-heart.svg?branch=master)](https://travis-ci.org/LivHed/handcrafted-heart)
 # Handcrafted heart 
 This is my Milestone Project 4: Full Stack Frameworks with Django - Code Institute.
 
