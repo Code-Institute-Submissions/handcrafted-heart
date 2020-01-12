@@ -43,6 +43,7 @@
 <!-- the order form and the payment form with a submit button -->
 <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
     <legend>Payment Details</legend>
+    {% csrf_token %}
     
     <!-- returns any credit card error message  -->
     <div id="credit-card-errors" style="display: none;">
