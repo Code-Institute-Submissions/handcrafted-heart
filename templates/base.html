@@ -18,7 +18,7 @@
 </head>
 
 <body>
-   <!-- Fixed masthead -->
+   <!-- Fixed navbar masthead, with if statement, depending if user is logged in or out -->
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -65,7 +65,13 @@
         </div>
     {% endif %}
     
-   <!-- The form for the search box -->
+    
+    
+    <!-- First container, with background image -->
+    <div class="container-fluid bg_image">
+        <div class="opaque-overlay">
+            
+             <!-- The form for the search box -->
    <div class="container">
        <div class="display">
             <form action="{% url 'search' %}" method="get">
@@ -75,7 +81,16 @@
         </div>
         {% block content %} {% endblock %}
     </div>
+
+            <!-- Headline -->
+            {% block page_heading %}
+            {% endblock %}
+
+                </div>
+            </div>
     
+    
+    <!-- the footer -->
     <footer>
         <div class="container">
             <p>Copyright Made by..</p>
