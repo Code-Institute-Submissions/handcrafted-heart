@@ -5,6 +5,7 @@ body {
     padding-top: 100px;
 }
 
+
 .bg_image {
     background: url("/static/images/freestocks-org-RmrQTzKNe2M-unsplash.jpg") no-repeat center center fixed;
     background-color: #f5f6fa;;
@@ -17,6 +18,37 @@ body {
     overflow: hidden;
         
 }
+
+/*--- jumbotron ---- */
+
+.jumbotron {
+    background-color: transparent;
+    padding: 0px;
+}
+
+.centre_alignment {
+    z-index: 10;
+    text-align: center;
+}
+
+/*--- Background Image overlay --- */
+
+.opaque-overlay {
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*--- Search btn ----*/
+.search_btn {
+    font-size: 15px;
+}
+
+
 
 
 .icon-bar {
