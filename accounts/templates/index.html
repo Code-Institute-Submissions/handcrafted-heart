@@ -1,18 +1,18 @@
 {% extends 'base.html' %} 
 
 {% block page_title %}Home Page{% endblock %}
-{% block content %}
+
 
 <!-- Page heading -->
 {% block page_heading %}
 <div class="row">
-  <div class="col-12 centre_alignment col_heading">
+  <div class="col-12 text-center col_heading">
     <!-- Page Headline-->
     <div class="jumbotron text-white">
       <h1 class="display-4">Welcome to the<br>Handcrafted heart</h1>
       <p class="lead">I´m Sarah, Check out my handmade knitted products made with the purpose to warm your heart during wintertime!
       </p>
-      <p>Qurious about my knitted products?<br>Check out my products for sale.<br>Click the button</p>
+      <p>Curious about my knitted products?<br>Check them out!</p>
       <p class="lead">
         <a class="btn btn-success text-white" href="{% url 'all_products' %}" role="button">Browse products</a>
       </p>
