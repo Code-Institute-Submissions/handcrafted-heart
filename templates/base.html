@@ -67,22 +67,18 @@
     <!-- First container, with background image -->
     <div class="container-fluid bg_image">
         <div class="opaque-overlay">
-
-
-            <!-- The form for the search box -->
-            <div class="container">
-                <div class="display">
-                    <form action="{% url 'search' %}" method="get">
-                        <input type="text" name="q">
-                        <button type="search">Search</button>
-                    </form>
-                </div>
-                {% block content %} {% endblock %}
+                
             
-
             <!-- Headline -->
-            {% block page_heading %} {% endblock %}
-             </div>
+            {% block page_heading %} 
+            {% endblock %}
+             
+            <!-- Row for search bar for the products -->
+            {% block search %}
+            {% endblock %}
+            
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
 
