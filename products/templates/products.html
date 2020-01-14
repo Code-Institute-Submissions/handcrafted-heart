@@ -1,5 +1,30 @@
 {% extends 'base.html' %}
 
+
+<!-- Page title here -->
+{% block page_title %}Products for Sale{% endblock %}
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row text-center">
+    <div class="col-10 col_content">
+        <!-- Page Headline, to show the user which page they are on -->
+        <h2 class="text-dark">Have a look around for a knitted heartwarming product just for you</h2>
+    </div>
+</div>
+{% endblock %}
+
+{% block search %}
+ <!-- The form for the search box -->
+            <div class="container">
+                <div class="display text-center">
+                    <form action="{% url 'search' %}" method="get">
+                        <input type="text" name="q">
+                        <button type="search">Search</button>
+                    </form>
+                </div>
+{% endblock %}
+
 {% block content %}
 
 <div class="row row-flex">
