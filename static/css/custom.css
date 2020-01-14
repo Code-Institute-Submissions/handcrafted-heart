@@ -7,7 +7,7 @@ body {
 
 
 .bg_image {
-    background: url("/static/images/freestocks-org-RmrQTzKNe2M-unsplash.jpg") no-repeat center center fixed;
+    background: url("/static/img/background.jpg") no-repeat center center fixed;
     background-color: #f5f6fa;;
     background-size: cover;
     height: 100vh;
