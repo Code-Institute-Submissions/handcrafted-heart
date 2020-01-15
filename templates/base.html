@@ -67,21 +67,13 @@
                     </li>
                     <!-- Link to contact form -->
                     <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index' %}#contact_form_nav">Contact</a>
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
                     </ul>
                     
                    
         </div>
     </nav>
-    
-    {% if messages %}
-    <div class="alert alert-success">
-        <div class="messages">
-            {% for message in messages %} {{ message }} {% endfor %}
-        </div>
-    </div>
-    {% endif %}
 
 
 
@@ -89,6 +81,14 @@
     <div class="container-fluid bg_image">
         <div class="opaque-overlay">
                 
+            <!-- Alert messages -->
+                {% if messages %}
+                  <div class="alert alert-success">
+                  <div class="messages">
+                {% for message in messages %} {{ message }} {% endfor %}
+                  </div>
+                  </div>
+                {% endif %}
             
             <!-- Headline -->
             {% block page_heading %} 
@@ -98,6 +98,7 @@
             {% block search %}
             {% endblock %}
             
+            <!-- Login and Register forms, and My profile -->
             {% block content %}
             {% endblock %}
         </div>
@@ -115,6 +116,9 @@
         {% block featured_products %}
         {% endblock %}
         
+     <!-- Row for Contact Me form -->
+     <!--   {% block contactme_content %}
+        {% endblock %} -->
     </div>
 
 
