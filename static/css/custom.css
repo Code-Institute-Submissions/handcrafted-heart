@@ -19,6 +19,7 @@ body {
         
 }
 
+
 /*--- jumbotron ---- */
 
 .jumbotron {
@@ -45,6 +46,29 @@ body {
 }
 
 
+/*----- images for featured products row  -----*/
+
+.images_featured {
+    background-color: #f1f2f6;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+    margin: auto;
+    z-index: -1;
+    padding: 0px;
+    overflow: hidden;
+}
+
+/* column Content for the featured products carousel */
+
+.content_featured {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    padding-top: 55px;
+    padding-bottom: 50px;
+    margin: auto;
+}
 
 
 .icon-bar {
