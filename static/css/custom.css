@@ -5,10 +5,15 @@ body {
     padding-top: 100px;
 }
 
-.navbar {
-    background-color: #af460f;
-}
 
+/*-----Navbar ------- */
+
+/*.navbar {
+    background-color: #af460f;
+}  */
+
+
+/*-------- Background image ----------*/
 
 .bg_image {
     background: url("/static/img/background.jpg") no-repeat center center fixed;
@@ -24,16 +29,21 @@ body {
 }
 
 
-/*--- jumbotron ---- */
+/*--------- Jumbotron --------- */
 
 .jumbotron {
     background-color: transparent;
     padding: 0px;
 }
 
-/*.jumbotron-text {
+.jumbotron-text {
     color: #fffdf9;
-}  */
+} 
+
+/*--- Search btn ----*/
+.search_btn {
+    font-size: 15px;
+}
 
 
 /*--- Background Image overlay --- */
@@ -48,16 +58,30 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/*--- Search btn ----*/
-.search_btn {
-    font-size: 15px;
+
+/*---- About Me section ---- */
+
+.about_content {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 40px;
+    margin: auto;
 }
 
 
+/*------ Featured Products section ------ */
+
+.carousel-inner img {
+    margin: auto;
+  }
+  
+
 /*----- images for featured products row  -----*/
 
-.images_featured {
-    background-color: #f1f2f6;
+.bg_image_featured {
+    background-color: #f6f4e6;
     background-size: cover;
     height: 60vh;
     width: 100%;
@@ -67,7 +91,7 @@ body {
     overflow: hidden;
 }
 
-/* column Content for the featured products carousel */
+/*---- column Content for the featured products carousel -----*/
 
 .content_featured {
     padding-left: 20px;
@@ -79,12 +103,6 @@ body {
 }
 
 
-/* Featured Products section  */
-
-.carousel-inner img {
-    margin: auto;
-  }
-  
 
 
 .icon-bar {
