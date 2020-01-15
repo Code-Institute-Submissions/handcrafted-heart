@@ -1,0 +1,19 @@
+from django import forms
+
+
+class ContactForm(forms.Form):
+    name = forms.CharField(required=True)
+    email_address = forms.EmailField(required=True)
+    message = forms.CharField(
+        required=True,
+        widget=forms.Textarea(
+            attrs={
+                "rows": 8,
+            },
+        ),
+    )
+
+    class Meta:
+        fields = [
+            'name', 'email_address', 'message'
+        ]
