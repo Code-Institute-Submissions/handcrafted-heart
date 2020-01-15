@@ -5,6 +5,10 @@ body {
     padding-top: 100px;
 }
 
+.navbar {
+    background-color: #af460f;
+}
+
 
 .bg_image {
     background: url("/static/img/background.jpg") no-repeat center center fixed;
@@ -26,6 +30,10 @@ body {
     background-color: transparent;
     padding: 0px;
 }
+
+/*.jumbotron-text {
+    color: #fffdf9;
+}  */
 
 
 /*--- Background Image overlay --- */
@@ -69,6 +77,14 @@ body {
     padding-bottom: 50px;
     margin: auto;
 }
+
+
+/* Featured Products section  */
+
+.carousel-inner img {
+    margin: auto;
+  }
+  
 
 
 .icon-bar {
@@ -131,7 +147,7 @@ different product descriptions. */
 
 
 /*----------------- The footer ----------------*/
-footer {
+.footer {
     margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
