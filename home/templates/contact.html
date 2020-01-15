@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
-{% block title %}
-Contact Us
-{% endblock %}
 {% load crispy_forms_tags %}
-{% block content %}
 
 <!-- Page title here -->
 {% block page_title %}Handcrafted heart | Contact Page{% endblock %}
+
+{% block content %}
 
 <div class="container-fluid p-0">
     <div class="row no-gutters">
@@ -31,7 +29,7 @@ Contact Us
                     {% csrf_token %}
                     <fieldset class="form-group">
                         <legend>Get in touch</legend>
-                        <p>Got a question for me? Don´t hesitate to get in touch.br>
+                        <p>Got a question for me? Don´t hesitate to get in touch.<br>
                             Send me a message and I´ll be with you shortly!
                         <hr>
                         {{ form|crispy }}
