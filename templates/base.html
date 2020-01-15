@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" type="image/png" href="media/images/favicon.ico"> {% block head_js %} {% endblock head_js %}
+    <link rel="shortcut icon" type="image/png" href="media/images/favicon.ico"> 
+    {% block head_js %} {% endblock head_js %}
     <!-- Page Title, with template injection -->
     <title>{% block page_title %}{% endblock %}</title>
 </head>
@@ -95,7 +96,7 @@
 
 
     <!-- the footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>Copyright Made by..</p>
         </div>
