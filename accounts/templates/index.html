@@ -8,7 +8,7 @@
 <!-- Page heading -->
 {% block page_heading %}
 <div class="row">
-  <div class="col-12 text-center col_heading">
+  <div class="col-12 text-center">
     <!-- Page Headline-->
     <div class="jumbotron text-white">
       <h1 class="display-4 text-white">Welcome to <br>Handcrafted heart</h1>
@@ -24,9 +24,24 @@
 {% endblock %}
 
 
+<!-- About Me Content -->
+{% block about_content %}
+<div class="row justify-content-center" id="about">
+  <div class="col-10 col-md-4 text-center about_content">
+    <!-- Description of Injection -->
+    <h2>About Me</h2>
+    <p>
+      I´m passionate about making products that will warm your heart and your body during wintertime up north.
+      I hope you enjoy my products made with the handcrafted heart spirit and that you will stay warm during the winter season!
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+
 <!-- Featured Products carousel -->
 {% block featured_products %}
-<div class="row justify-content-center images_featured center-block">
+<div class="row justify-content-center bg_image_featured center-block">
   <div class="col-10 col-md-6 content_featured">
     <!-- Featured Products Injection -->
     <h2>Featured Products</h2>
@@ -38,13 +53,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img class="img-responsive" src="{% static 'img/beanie1-min.jpg' %}" alt="First slide">
+          <img src="{% static 'img/beanie1-min.jpg' %}" alt="First slide">
         </div>
         <div class="item">
-          <img class="img-responsive" src="{% static 'img/scarf1-min.jpg' %}" alt="Second slide">
+          <img src="{% static 'img/scarf1-min.jpg' %}" alt="Second slide">
         </div>
         <div class="item">
-          <img class="img-responsive" src="{% static 'img/bunnysocks-min.jpg' %}" alt="Third slide">
+          <img src="{% static 'img/bunnysocks-min.jpg' %}" alt="Third slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#featuredProductsCarousel" role="button" data-slide="prev">
