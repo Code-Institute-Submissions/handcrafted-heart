@@ -7,7 +7,7 @@ from .forms import ContactForm
 # Create your views here.
 def contact(request):
     """
-    Directs the customer to a contact us form
+    Directs the customer to a contact me form
     """
    
     if request.method == 'GET':
