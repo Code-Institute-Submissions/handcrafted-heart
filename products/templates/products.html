@@ -6,49 +6,51 @@
 
 <!-- Page heading here -->
 {% block page_heading %}
-<div class="row text-center">
-    <div class="col-10 col_content">
+<div class="row justify-content-center products_heading">
+    <div class="col-12">
         <!-- Page Headline, to show the user which page they are on -->
-        <h2 class="text-dark">Have a look around for a knitted heartwarming product just for you</h2>
+        <h2 class="text-light text-center">Have a look around for a knitted heartwarming product just for you</h2>
     </div>
 </div>
 {% endblock %}
 
+<!-- The form for the search box -->
 {% block search %}
- <!-- The form for the search box -->
-            <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
                 <div class="display text-center">
                     <form action="{% url 'search' %}" method="get">
-                        <input type="text" name="q">
+                        <input type="text" name="q" placeholder="Search for Products here">
                         <button type="search">Search</button>
                     </form>
+                </div>
+                </div>
                 </div>
 {% endblock %}
 
 
+<!-- Display products --> 
 {% block content %}
-<div class="row row-flex">
+<div class="row justify-content-around products_row">
     {% for product in products %}
-        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
-            <div class="panel-body">
-                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
-
-                <h3>{{ product.name }}</h3>
-                <p class="product-description">{{ product.description }}</p>
-                <p class="price"><i class="fa fa-eur" aria-hidden="true"></i>{{ product.price }}</p>
-
-                <form method="post" action="{% url 'add_to_cart' product.id %}">
-                    {% csrf_token %}
-                    <div class="input-group">
-                        <input name="quantity" type="number" min="1" max="5" class="form-control" placeholder="Quantity">
-                        <span class="input-group-btn">
-                            <button class="btn btn-success" type="submit">Add</button>
-                        </span>
-                    </div>
-                </form>
-            </div>
+    <div class="col-10 col-md-6 col-lg-4 text-center panel_default">
+        <div class="card">
+            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+            <p><strong>{{ product.name }}</strong></p>
+            <p class="product-description">{{ product.description }}</p>
+            <p class="price">€ {{ product.price }}</p>
+            <form method="post" action="{% url 'add_to_cart' product.id %}">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input name="quantity" type="number" min="1" max="5" class="form-control" placeholder="Quantity"
+                        required="true">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="submit">Add</button>
+                    </span>
+                </div>
+            </form>
         </div>
+    </div>
     {% endfor %}
 </div>
-
 {% endblock %}
