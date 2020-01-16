@@ -2,7 +2,6 @@
 
 body {
     font-family: 'Alegreya', serif;
-    padding-top: 100px;
 }
 
 
@@ -62,25 +61,17 @@ body {
 /*---- About Me section ---- */
 
 .about_content {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 75px 20px 40px 20px;
     text-align: center;
-    padding-top: 75px;
-    padding-bottom: 40px;
     margin: auto;
 }
 
 
-/*------ Featured Products section ------ */
+/*------ Featured Products section ------------------ */
 
-.carousel-inner img {
-    margin: auto;
-  }
-  
+/*-----images for featured products row-----*/
 
-/*----- images for featured products row  -----*/
-
-.bg_image_featured {
+.bg_images_featured {
     background-color: #f6f4e6;
     background-size: cover;
     height: 60vh;
@@ -91,18 +82,17 @@ body {
     overflow: hidden;
 }
 
-/*---- column Content for the featured products carousel -----*/
+/*----column Content for the featured products carousel----*/
 
-.content_featured {
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    padding-top: 55px;
-    padding-bottom: 50px;
+.content_imgs_featured {
+    padding: 30px 20px 40px 20px;
     margin: auto;
 }
 
-
+.carousel-inner img {
+    margin: auto;
+  }
+  
 
 
 .icon-bar {
