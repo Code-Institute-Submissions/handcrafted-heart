@@ -15,14 +15,16 @@ def contact(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
+            subject = form.cleaned_data['subject']
             from_email = settings.EMAIL_HOST_USER
             email_address = form.cleaned_data['email_address']
             message = form.cleaned_data['message']
-            to_list = [email_address]
+            recipient_list = [email_address]
             send_mail(
+                subject,
                 message,
                 from_email,
-                to_list,
+                recipient_list,
                 fail_silently=False)
             messages.success(
                 request,
