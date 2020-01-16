@@ -1,12 +1,12 @@
-$(document).ready(function () {
+/* $(document).ready(function () {
     
-    /* Initializes the carousel and cycles through the items from lesft to right */
+    /* Initializes the carousel and cycles through the items from left to right */
     
-    $('.carousel').carousel({
+ /*   $('.carousel').carousel({
         interval: 5000,
         touch: true
     });
     
     $('.carousel').carousel('cycle');
     
-})
+})   */
