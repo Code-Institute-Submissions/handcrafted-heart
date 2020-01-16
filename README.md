@@ -171,8 +171,9 @@ SECRET_KEY: <your_secret_key>
 ## Credits
 
 ### Content
-* The content on the website was written by me and Sarah, the owner of the page is an imaginary person, after doing research with searching for and looking at other pages containing knitted products.
-*  
+* The content on the website was written by me for the imaginary shop owner Sarah, after doing research with searching for and looking at other pages containing knitted products for smaller businesses.
+* For the Featured Products carousel I´m using a Carousel code snippet example, the third example With Indicators, copied from [this page](https://mdbootstrap.com/docs/jquery/javascript/carousel/)
+and then modified for my own needs.
 
 ### Media
 * On this webpage I´m using photos from [Unsplash](https://unsplash.com/), according to their [Unsplash licence](https://unsplash.com/license).
