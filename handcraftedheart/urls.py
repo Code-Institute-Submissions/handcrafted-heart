@@ -37,6 +37,6 @@ urlpatterns = [
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
     url(r'^home/', include(urls_home)),
-    url(r'^home/', contact, name='contact'),
+    url(r'^contact/', contact, name='contact'),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
 ]
