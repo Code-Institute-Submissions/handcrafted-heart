@@ -30,7 +30,17 @@
 
 
 <!-- Display products --> 
+
 {% block content %}
+ <!-- Button to view all products, visible on all screen sizes -->
+<div class="row justify-content-center">
+<div class="col-12 text-center d-block">
+            <a href="{% url 'all_products' %}" class="btn btn-success">View all</a>
+        </div>
+        </div>
+        
+        
+
 <div class="row justify-content-around products_row">
     {% for product in products %}
     <div class="col-10 col-md-6 col-lg-4 text-center panel_default">
