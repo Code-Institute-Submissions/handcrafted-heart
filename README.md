@@ -2,9 +2,10 @@
 # Handcrafted heart 
 This is my Milestone Project 4: Full Stack Frameworks with Django - Code Institute.
 
-This is a page for.. 
 The idea of this web page is that.. My aim is that..
-In this app I have used the programming language Python along with the framework .. and the database...
+
+This page is made for an imaginary person from Sweden, Sarah, a small business owner who makes knitted handcrafted products and sell them. The purpose of the products are for warming during winter time up north.
+
 [Check it out here!]()
 
 ![Handcrafted heart img](the link to the am i responsive webpage imageg "The handcrafted heart image")
@@ -14,12 +15,12 @@ In this app I have used the programming language Python along with the framework
 ### Design process
 After doing research looking at websites with knitted products I found that there where no pages dedicated only to.. which is a gap I wanted to fill. I wanted to narrow this search down to..  My goals with the design was set to:
 
-* To make the design suitable for people who wants to find .. in an easy way. I wanted to do this with a stylistic and easily understandable design with.. colors and buttons with clear directions.
-* To make a web application with several pages, each with it´s clear purpose, and this with a user friendly and easy layout to quick be able to understand what you can do and how.
-* The fonts that I chose to use for this website are.. because it presents the content in a stylistic and easy-to-read way.
+* To make the design suitable for people who wants to find knitted products in an easy way. I wanted to do this with a stylistic and easily understandable design with warm colors and buttons with clear directions.
+* To make a web application with several pages, each with it´s clear purpose, and this with a user friendly and easy layout for the user to quick be able to understand what you can do and how.
+* The fonts that I chose to use for this website provides an artistic feeling, but are at the same time easy to read, which I think suits the purpose of the page, and it´s audience.
 * I chose to use..
 * 
-*
+* I chose the name of the page to be Handcrafted heart, which are supposed to give the customers a personal and warm experience when visiting the page, also some of the products descriptions are a bit more warm and personal to enrich this experience.
 
 This handles the CRUD functionality (Create, Read, Update and Delete) and I planned for this web page to give a sense of.. 
 
@@ -27,8 +28,9 @@ This handles the CRUD functionality (Create, Read, Update and Delete) and I plan
 The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. All of the pages are showed as I planned them and one example of mobile view can be found on the last page in the document. [Check them out here!](add link to the wireframes)
 
 ### User stories
-* 
-*
+* As a person living up north, for example in Sweden, I would like to find knitted products to keep me warm during the winter season. 
+* As a person interested in knitting I would like to have a look at someone elses creations, and buy something from this person to get inspiration of my own.
+* As a creative, mindful, environmental friendly person living up north I would rather buy handmade knitted products to support small local business owners instead of buying products from big companies. 
 *
 
 ## Features
