@@ -73,11 +73,11 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * [Responsinator](http://www.responsinator.com/) was used to check the responsiveness of the page, and also [Responsivedesign](http://ami.responsivedesign.is/) for this.
 * [Stripe](https://stripe.com/en-se) was used as the payment platform to validate and accept credit card payments in a secure way.
 * [AWS S3 Bucket](https://aws.amazon.com/s3/) to store images that was entered into the database.
-* 
-*
+* [GMAIL SMTP](https://docs.djangoproject.com/en/3.0/ref/settings/#email-backend) was installed and set with specific settings to be used for the function to send emails within this app to users. You can read more [here](https://docs.djangoproject.com/en/3.0/topics/email/).
+* I used [Compressed JPEG](https://compressjpeg.com/) to compress images to take up less space in the S3 Bucket. 
 
 #### Databases
-* [PostgreSQL](https://www.postgresql.org/) was used for production database, which is provided by heroku.
+* The relational database [PostgreSQL](https://www.postgresql.org/) was used for production database, which is provided by heroku.
 * [SQlite3](https://www.sqlite.org/index.html) was used for development database, which is provided by django.
 
 ## Information Architecture
@@ -174,6 +174,7 @@ SECRET_KEY: <your_secret_key>
 * The content on the website was written by me for the imaginary shop owner Sarah, after doing research with searching for and looking at other pages containing knitted products for smaller businesses.
 * For the Featured Products carousel I´m using a Carousel code snippet example, the third example With Indicators, copied from [this page](https://mdbootstrap.com/docs/jquery/javascript/carousel/)
 and then modified for my own needs.
+* The footer code snippet is copied from [this page](https://mdbootstrap.com/docs/jquery/navigation/footer/) and then modified for my needs.
 
 ### Media
 * On this webpage I´m using photos from [Unsplash](https://unsplash.com/), according to their [Unsplash licence](https://unsplash.com/license).
