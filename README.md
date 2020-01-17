@@ -176,9 +176,9 @@ STRIPE_SECRET: <your stripe secret key>
 ```
 
 * To get the AWS secret keys for the AWS S3 Storage you have to have an AWS account to get access for the S3 Storage. Follow the instructions on [these pages](https://docs.aws.amazon.com/s3/index.html).
-* Disable collectstatic is set to 1 because:
-* The email functionality I used was Gmail SMTP, following instructions from [these pages](https://docs.djangoproject.com/en/3.0/ref/settings/#email-backend) and even more detailed [here](https://medium.com/@_christopher/how-to-send-emails-with-python-django-through-google-smtp-server-for-free-22ea6ea0fb8e).
-* The Stripe keys I got from following instructions from the [Stripe](https://stripe.com/docs/payments) documents.
+* Disable collectstatic is set to 1 because it means that since I´m using static on S3, Heroku will not try and upload the static files.
+* To use the email functionality called Gmail SMTP, follow the instructions from [these pages](https://docs.djangoproject.com/en/3.0/ref/settings/#email-backend) and even more detailed [here](https://medium.com/@_christopher/how-to-send-emails-with-python-django-through-google-smtp-server-for-free-22ea6ea0fb8e).
+* To get the Stripe keys follow the instructions from the [Stripe](https://stripe.com/docs/payments) documents.
 
 * Click on the button Open app in the top right corner in the Heroku page and you can now view your deployed app.
 
