@@ -161,13 +161,25 @@ This website is deployed on Heroku, following these steps:
 * In the new Heroku app, Click on Deploy. In the section Deployment method, click on Github.
 * Choose the correct GitHub repository to link it to the Heroku app.
 * In the section Automatic Deploys, click on Enable automatic deploys, from master branch.
+* To add the Postgres database url go to the page Resources in your Heroku app page, and search for Heroku Postgres in Addons, and attach the database to your app.
 * Now go to Settings and click on Reveal config vars, and set them to: 
 ```
-IP : 0.0.0.0
-PORT: 5000
-SECRET_KEY: <your_secret_key>
+SECRET_KEY: <your secret key>
+AWS_ACCESS_KEY_ID: <your aws access key>
+AWS_SECRET_ACCESS_KEY: <your secret aws access key>
+DATABASE_URL: <the database url>
+DISABLE_COLLECTSTATIC: <1> 
+EMAIL_PASS: <your email password>
+EMAIL_USER: <your email> 
+STRIPE_PUBLISHABLE: <your stripe publishable key>
+STRIPE_SECRET: <your stripe secret key> 
 ```
-* 
+
+* To get the AWS secret keys for the AWS S3 Storage you have to have an AWS account to get access for the S3 Storage. Follow the instructions on [these pages](https://docs.aws.amazon.com/s3/index.html).
+* Disable collectstatic is set to 1 because:
+* The email functionality I used was Gmail SMTP, following instructions from [these pages](https://docs.djangoproject.com/en/3.0/ref/settings/#email-backend) and even more detailed [here](https://medium.com/@_christopher/how-to-send-emails-with-python-django-through-google-smtp-server-for-free-22ea6ea0fb8e).
+* The Stripe keys I got from following instructions from the [Stripe](https://stripe.com/docs/payments) documents.
+
 * Click on the button Open app in the top right corner in the Heroku page and you can now view your deployed app.
 
 ## Credits
