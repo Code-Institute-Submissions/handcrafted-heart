@@ -5,8 +5,8 @@ from .models import Product
 class ProductTests(TestCase):
     
       """
-      Define tests here that will be
-      run against the Product models.
+      Test that I'll run against the
+      Product model
       """
       
       # Test the name of the product.
