@@ -26,21 +26,19 @@
 <!-- About Me Content -->
 
 {% block about_content %}
-<div class="row mt-3">
-  <div class="col-12 col-sm-6 about_content">
-    <div class="d-flex">
-      <div class="text-center">
-        <h2>About Me</h2>
+<div class="row justify-content-center" id="about">
+  <div class="col-12 col-md-6 about_section">
         <br>
-        <p>Hi! I´m Sarah, and I´m passionate about making products that will warm your heart and your body during the wintertime up north. I hope you enjoy my products made with the handcrafted heart spirit and that you will stay warm during the winter season</p>
-      </div>
+        <h2 class="text-center">About Me</h2>
+        <br>
+        <p class="text-center">Hi! I´m Sarah, and I´m passionate about making products that will warm your heart and your body during the wintertime up north. I hope you enjoy my products made with the handcrafted heart spirit and that you will stay warm during the winter season</p>
+      
     </div>
-  </div>
 
-  <div class="col-12 col-sm-6 about_content">
-    <div class="d-flex justify-content-center">
-      <img class="about_image" src="{% static 'img/aboutimage-min.jpg' %}">
-    </div>
+  <div class="col-12 col-md-6 about_section">
+    <h6 class="text-muted">Me working with my craft during the winter:</h6>
+      <img class="img-fluid" src="{% static 'img/aboutimage-min.jpg' %}" alt="About the owner image">
+      </div>
   </div>
 
 </div>
