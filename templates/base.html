@@ -97,15 +97,16 @@
             <!-- Row for search bar for the products -->
             {% block search %}
             {% endblock %}
-            
-            <!-- Login, Register and Contact forms and users Profile-->
+        
+            <!-- Login, Register and Contact forms, users Profile, Shop, Cart -->
             {% block content %}
             {% endblock %}
-        </div>
+            
     </div>
+    </div>
+
     
-    
-     <!-- Second Container to show About info and Featured Products -->
+     <!-- Container to show About info and Featured Products -->
     <div class="container-fluid ">
         
          <!-- Row for About_me block content -->
@@ -119,12 +120,12 @@
     </div>
 
 
-<div class="container-fluid">
+
     <!-- Footer. Example copied from https://mdbootstrap.com/docs/jquery/navigation/footer/ and modified for my needs. -->
   <footer class="page-footer sticky-footer font-small cyan darken-3">  
 
   <!-- Footer Elements -->
-  <div class="container">  
+  <div class="container-fluid">
 
     <!-- Grid row-->
     <div class="row">
@@ -160,7 +161,7 @@
 
  </footer>
 <!-- Footer -->
-</div>
+
 
     <!-- Scripts for Bootstrap --> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
