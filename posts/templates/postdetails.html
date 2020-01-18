@@ -12,7 +12,7 @@
 </div>
 {% endblock %}
 
-
+<!-- Blog Posts full content -->
 {% block content %}
     <div class="row justify-content-center text-light">
       <!-- Post Content Column -->
@@ -23,20 +23,19 @@
             <hr>
 
             {% if post.image %}
-                <img class="img-fluid rounded img-blogpost" src="/media/{{ post.image }}">
+                <img class="img-fluid rounded" src="/media/{{ post.image }}">
             {% endif %}
             <hr>
-            
             <p class=""> {{ post.content }} </p>
     
             <blockquote class="blockquote">
-              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet.</p>
-              <footer class="blockquote-footer">Writer
-                <cite title="Source Title">Sarah>
+              <p class="mb-0">Start knitting - Seize the day with the handcrafted heart spirit</p>
+              <footer class="blockquote-footer">Author
+                <cite title="Source Title">Sarah
               </footer>
             </blockquote>
             
-            <a href="{% url 'get_posts' %}" class="btn btn-dark rounded-0">Go back to Blog</a>
+            <a href="{% url 'get_posts' %}" class="btn btn-info rounded-1">Go back to Blog</a>
     
         </div>
     </div>
