@@ -59,18 +59,13 @@ body {
 }
 
 
+
 /*---- About Me section ---- */
- .about_content {
-    padding: 60px 20px;
-    text-align: center;
-    margin: auto;
+ .about_section {
+    padding: 50px 20px;
 } 
 
-/*.about_image {
-    max-height: 200px;
-    max-width: 350px;
-    justify-content: center;
-} */
+
 
 /*------ Featured Products section ------------------ */
 
