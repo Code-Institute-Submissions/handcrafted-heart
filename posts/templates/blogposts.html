@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block page_title %}Blog Page | Handcrafted heart{% endblock %}
 
@@ -7,13 +8,13 @@
 <div class="row justify-content-center">
    <div class="col-12 col-md-6">
         <!-- Page Headline, so the user knows which page they are on -->
-        <h2 class="text-white">Blog</h2>
+        <h2 class="text-white text-center">Blog</h2>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
- <div class="row justify-content-center">
+ <div class="row justify-content-center text-light">
         <!-- Blog Posts column -->
               <div class="col-lg-8 mb-5">
                   {% for post in posts %}
@@ -21,11 +22,13 @@
                     <hr>
                     
                     <p> {{ post.published_date }} </p>
-                    <img class="img-fluid" src="/media/{{ post.image }}">
-                    <hr>
+               <!--     <img class="img-fluid" src="media/images/{{ post.image }}">  -->
+                 <!--    <img class="img-fluid" src="/media/{{ post.image }}">  -->
+                    <img class="img-fluid" src="url('{{ MEDIA_URL }}{{ post.image }}')">
+                     <hr> 
             
                     <p class="lead">{{ post.content|truncatewords:30 }}</p>
-                    <p><a href="{% url 'post_details' post.id %}"  class="btn btn-dark rounded-0">Read more</a></p>
+                    <p><a href="{% url 'post_details' post.id %}"  class="btn btn-primary rounded-0">Read more</a></p>
                     <div class="mb-5"></div>
                  {% endfor %}
               </div>
