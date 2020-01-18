@@ -154,8 +154,8 @@ For local deployment you must have an IDE, like [Visual Studio Code](https://cod
 ### Heroku Deployment
 This website is deployed on Heroku, following these steps:
 
-* First, create a `requirements.txt` file using the `pip freeze > requirements.txt` command in the terminal. 
-* Then,create a Procfile with the command `echo web: python app.py > Procfile` in the terminal. 
+* First, create a `requirements.txt` file using the `pip freeze > requirements.txt` command in the terminal to make all of the installed packages and libraries to go in to the file. 
+* Then, create a Procfile with the command `echo web: python app.py > Procfile` in the terminal. 
 * Then type the `git add` and `git commit` commands for these new files and then `git push` to GitHub.
 * Then go to the Heroku website and go to Dashboard and click on the New button, and then click on Create new app. Name it and set the region to Europe.
 * In the new Heroku app, Click on Deploy. In the section Deployment method, click on Github.
@@ -180,7 +180,10 @@ STRIPE_SECRET: <your stripe secret key>
 * To use the email functionality called Gmail SMTP, follow the instructions from [these pages](https://docs.djangoproject.com/en/3.0/ref/settings/#email-backend) and even more detailed [here](https://medium.com/@_christopher/how-to-send-emails-with-python-django-through-google-smtp-server-for-free-22ea6ea0fb8e).
 * To get the Stripe keys follow the instructions from the [Stripe](https://stripe.com/docs/payments) documents.
 
-* Click on the button Open app in the top right corner in the Heroku page and you can now view your deployed app.
+* With all these steps gone through you can run this command in your terminal: `python manage.py makemigrations` and then run `python3 manage.py migrate` to migrate the database models, which will allow you access to the data models from the backend.
+* After the migrations you can create your superuser account in your new database by running the command `python manage.py createsuperuser` which creates an adminstrator for the application. 
+
+* Now in your Heroku page for the application click on the button Open app in the top right corner and you can now view your deployed app.
 
 ## Credits
 
