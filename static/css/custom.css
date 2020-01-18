@@ -34,6 +34,7 @@ body {
 .jumbotron {
     background-color: transparent;
     padding: 0px;
+    margin-top: 50px;
 }
 
 .jumbotron-text {
@@ -187,5 +188,11 @@ different product descriptions. */
 
 .contact_btn {
     margin-bottom: 15px;
+}
+
+/*--- Blog image ---*/
+
+.img-fluid {
+    align-content: center;
 }
 
