@@ -60,7 +60,7 @@ body {
 
 
 
-/*---- About Me section ---- */
+/*-------- About Me section ------- */
  .about_section {
     padding: 50px 20px;
 } 
@@ -99,8 +99,12 @@ body {
     background-color: #fff;
 }
 
+
+
+/*-------- Register and Login forms -------*/
 .accountform {
     padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .badge {
@@ -124,6 +128,13 @@ caption p {
     word-wrap: break-word;
 }
 
+.products_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    align-content: center;
+}
+
 /*.products_row {
     padding-bottom: 30px;
     margin: 30px 15px 30px 15px;
@@ -137,21 +148,15 @@ caption p {
     background-color: white;
 }
 
-/* .card {
-    height: 100%;
-    border: 1px solid #ddd;
-    margin: 10px;
-}  */
-
 
 /* The product image */
 .product {
-    background-size: contain;
-    background-position: center center;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    margin: auto;
 }
 
 .card {
@@ -159,7 +164,7 @@ caption p {
     min-width: 250px;
     max-width: 300px;
     min-height: 400px;
-    max-height: 700px;
+    max-height: 400px;
     margin: 10px;
     text-align: center;
     padding: 10px;
