@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+
+
+<!-- Page title here -->
+{% block page_title %}Inspiration | Handcrafted heart{% endblock %}
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center">
+   <div class="col-12 col-md-6">
+        <!-- Page Headline, so the user knows which page they are on -->
+        <br>
+        <h2 class="text-white text-center">Knitting Inspiration</h2>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container mb-5">
+  <!-- Title section  -->  
+    <div class="sec-title p-b-52 mt-3 mb-4">
+        <h3 class="m-text5 t-center text-light">Share your knowledge</h3>
+        <p class="text-light">Let´s share that rich knitting knowledge to inspire one another. 
+        If you have any advice, tips & trix or patterns you want to share with us all, just go for it and click on the button Add Inspiration!</p>
+    </div>
+    
+
+    <!-- Here the user can add Inspiration to share -->
+    <div id="accordion">
+        {% for inspiration in inspirations %}   
+            <div class="card mb-3 rounded-0">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0 "> {{ inspiration.title }} </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body text-light">
+                        {{ inspiration.content }}
+                    </div>
+                </div>
+            
+            </div>
+         {% endfor %}
+    </div>
+<!-- Button to add inspiration  -->
+    <a href="{% url 'added_inspiration' %}" class="btn btn-info rounded-1 btn-sm" >Add Inspiration</a>
+
+</div>
+{% endblock %}
