@@ -17,7 +17,6 @@ def post_details(request, pk):
     return render(request, "postdetails.html", {'post': post})
 
 
-
 def create_or_edit_post(request, pk=None):
     post = get_object_or_404(BlogPost, pk=pk) if pk else None
     if request.method == "POST":
