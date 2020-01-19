@@ -4,11 +4,11 @@ This is my Milestone Project 4: Full Stack Frameworks with Django - Code Institu
 
 The idea of this web page is that.. My aim is that..
 
-This page is made for an imaginary person from Sweden, Sarah, a small business owner who makes knitted handcrafted products and sell them. The purpose of the products are for warming during winter time up north.
-
+This page is made for an imaginary shop owner from Sweden, Sarah, a small business owner who makes knitted handcrafted products and sell them. The purpose of the products are for warming during winter time up north.
+To buy warm products knitted by hand and to get inspiration through the blog and to share inspiration of yout own is all combined in this web application.
 [Check it out here!]()
 
-![Handcrafted heart img](the link to the am i responsive webpage imageg "The handcrafted heart image")
+![Handcrafted heart img](the link to the am i responsive webpage image "The handcrafted heart image")
 
 ## UX
 
@@ -107,7 +107,7 @@ How I meet these needs:
 ### Validation of code
 - I used [this website](https://validator.w3.org/#validate_by_input) to validate my HTML by direct input.
 - I used [this website](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) to validate my CSS by direct input.
-- how I validated django and python..
+- how I validated python..
 
 ### The responsiveness of the website
 I used Responsinator to check the responsiveness of the page.
