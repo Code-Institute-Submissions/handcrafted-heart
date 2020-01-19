@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from .models import Inspiration
 from .forms import InspirationSharingForm
 
@@ -8,7 +9,8 @@ def get_inspiration(request):
         inspiration = Inspiration.objects.all()
         return render(request, "inspiration.html", {'inspiration': inspiration})
     
-
+    
+@login_required()
 def inspiration_content(request, pk):
     if request.method == "GET":
         inspiration = get_object_or_404(Inspiration, pk=pk)
@@ -20,7 +22,7 @@ def inspiration_content(request, pk):
         return redirect('/inspiration/', {'inspiration': inspiration})
 
 
-
+@login_required()
 def create_or_edit_inspiration(request, pk=None):
     inspiration = get_object_or_404(Inspiration, pk=pk) if pk else None
     if request.method == "POST":
