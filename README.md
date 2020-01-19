@@ -36,21 +36,26 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 ## Features
 #### Existing Features
 * The navbar contains the name of the web application and the pages you can click on to visit. The pages are named clearly.
-* The select menu with the products and the search button is placed .. as a natural next step of action to follow.
-* The products and the details about them are shown in ...panel bodies?, in a responsive way. The user can click on the product to view the details about the product and to be able to add it to the cart.
-* The fields in the forms are required (except for the insert image field), so the user won´t be able to submit the forms until all of these fields are filled in. This will show nicely in the panel bodies?.., with all rows complete inside of them.
-* The name of the webpage is placed in the navbar in the left corner as good common pratcice, and are clickable and leads to the landing page. The navbar collapse to a burger icon on smaller devices.
-* If a user clicks on the add product button...
-* The page has authentication in the sign in and the registration forms, so the user can add products and buy them only when they are logged in.
-* pagination..
+* When a user is logged in the Profile and Logout link is showing in the navbar, but if a user is Logged out the Login and Register links are showing instead. All of the other links are showing all the time.
+* The search box to search for specific products by keayword is placed underneath the heading. Underneath the search box there is a button to view all the products, this is placed here to direct the user as a natural step to see all of the products at once again after the search for a specific product, if wished.
+* The products and the details about them are shown in with cards, in a responsive way. The user can click on the quantity field to choose between the amount from 1 to 5, and are then able to add it to the cart with the Add button.
+* The fields in the forms are required so the user won´t be able to submit the forms until all of the fields are filled in.
+* The name of the webpage is placed in the top left corner of the navbar as good common pratcice, and are clickable and leads to the landing page. The navbar collapse to a burger icon on smaller devices and are placed in the top right corner.
+* The page has authentication functionality in the sign in and the registration forms.
+* The requirement to log in is activated and the user are redirected to the Login page when the user clicks on the Checkout button in the Cart page. A user can buy products only when he/she are logged in.
+* The user is also required to Login in and are redirected to the Login page when he/she clicks on the button Add Inspiration on the Inspire page.
+* On the Cart page the user can view the order, and also use the Amend button to change the quantity of the order. If the cart is empty the user can click on a button to redirect them to the Shop page. 
+* Checkout form to add customer details and credit card details
+* Purchase the products with Stripe test functionality. 
+* Blog entries page, where the admin adds blogposts to inspire the users with knitting related topics.
+* 
 
-#### Features Left to Implement
-* In the future I want to add 
-* If I have had more time with the project I would have added..
-* If I have had more time I would also have wanted to add..
-* In the future I would want users to be able to..
-* I also want to add..
-* I want to add icons to the ..
+
+#### Features left I would like to Implement
+* In the future I want the users to be able to add comments to the shop owners blogposts, and possibly also stars to vote for the most inspirational posts.
+* If I have had more time with the project I would have added the functionality to click on a product to view it in a new tab, and add more information about the product to read there. 
+* If I have had more time I would also have wanted to add a commenting system for the users Inspiration posts to give eachother feedback and start discussions. 
+* 
 *
 
 
@@ -179,7 +184,7 @@ STRIPE_SECRET: <your stripe secret key>
 * To get the AWS secret keys for the AWS S3 Storage you have to have an AWS account to get access for the S3 Storage. Follow the instructions on [these pages](https://docs.aws.amazon.com/s3/index.html).
 * Disable collectstatic is set to 1 because it means that since I´m using static on S3, Heroku will not try and upload the static files.
 * To use the email functionality called Gmail SMTP, follow the instructions from [these pages](https://docs.djangoproject.com/en/3.0/ref/settings/#email-backend) and even more detailed [here](https://medium.com/@_christopher/how-to-send-emails-with-python-django-through-google-smtp-server-for-free-22ea6ea0fb8e).
-* To get the Stripe keys follow the instructions from the [Stripe](https://stripe.com/docs/payments) documents.
+* To get the Stripe keys follow the instructions from the [Stripe](https://stripe.com/docs/payments) documents, and use Stripe´s test functionality.
 
 * With all these steps gone through you can run this command in your terminal: `python manage.py makemigrations` and then run `python3 manage.py migrate` to migrate the database models, which will allow you access to the data models from the backend.
 * After the migrations you can create your superuser account in your new database by running the command `python manage.py createsuperuser` which creates an adminstrator for the application. 
