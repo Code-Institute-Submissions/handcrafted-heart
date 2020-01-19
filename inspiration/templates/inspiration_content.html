@@ -1,17 +1,30 @@
 {% extends "base.html" %}
 
-{% block content %}
-    <div class="row">
-        <div class="col-md-12">
-            <h3>{{ inspiration.title }}</h3>
-            <div class="row">
-                <div class="col-md-12">
-                    <p>{{ inspiration.content }}</p>
-                    <a href="{% url 'get_inspiration' %}" class="btn btn-info">Back to Inspire Page</a>
-                    <a href="{% url 'edit_inspiration' inspiration.id %}" class="btn btn-info">Edit Inspiration</a>
-                    <hr>
-                </div>
-            </div>
-        </div>
+<!-- Page title here -->
+{% block page_title %}Edit Inspiration | Handcrafted heart{% endblock %}
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center">
+   <div class="col-12 col-md-6">
+        <!-- Page Headline, so the user knows which page they are on -->
+        <br>
+        <h2 class="text-light text-center">Edit Inspiration</h2>
     </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8 mb-5">
+    <form class="text-light" method="POST" enctype="multipart/form-data" action="{% url 'edit_inspiration' %}">
+        {% csrf_token %}
+        {{ form | as_bootstrap }}
+        <button type="submit" class="btn btn-info rounded-1">Add the edited Inspiration</button>
+    </form>
+    </div>
+</div>
+
+
 {% endblock %}
