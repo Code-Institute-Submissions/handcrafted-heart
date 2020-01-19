@@ -145,11 +145,12 @@ Contact form
 ## Deployment
 
 ### Local Deployment
-For local deployment you must have an IDE, like [Visual Studio Code](https://code.visualstudio.com/) and the following to be installed locally on your machine: [git](https://git-scm.com/), [PIP](https://pip.pypa.io/en/stable/installing/), [Python 3](https://www.python.org/downloads/), [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/) and a [MongoDB Atlas account](https://docs.atlas.mongodb.com/).
-* After creating your own folder and are in it, type this in to the terminal `git clone https://github.com/LivHed/coworking-spaces.git`
+For local deployment you must have an IDE, like for example [Visual Studio Code](https://code.visualstudio.com/) and the following to be installed locally on your machine: [Git](https://git-scm.com/), [PIP](https://pip.pypa.io/en/stable/installing/) and [Python 3](https://www.python.org/downloads/). 
+* After creating your own folder and you are in it, type this in to the terminal `git clone https://github.com/LivHed/handcrafted-heart.git`
 * Then run this command `pip install --upgrade pip`
 * To be followed by this command `pip install -r requirements.txt` to install the required modules. 
-* You can run the app with the command `python3 app.py`
+* Run the commands to create a superuser, makemigrations and migrate. Read more about this further down in the section Heroku deployment.
+* You can now run the app locally with the command `python manage.py runserver`
 
 ### Heroku Deployment
 This website is deployed on Heroku, following these steps:
