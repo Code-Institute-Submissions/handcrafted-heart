@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'storages',
     'home',
     'posts',
+    'inspiration',
 ]
 
 MIDDLEWARE = [
