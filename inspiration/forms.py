@@ -6,4 +6,4 @@ class InspirationSharingForm(forms.ModelForm):
 
     class Meta:
         model = Inspiration
-        fields = ('title', 'content', 'created_date', 'published_date')
+        fields = ('title', 'content', 'published_date')
