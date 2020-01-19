@@ -28,10 +28,10 @@ This handles the CRUD functionality (Create, Read, Update and Delete) and I plan
 The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. All of the pages are showed as I planned them and one example of mobile view can be found on the last page in the document. [Check them out here!](add link to the wireframes)
 
 ### User stories
-* As a person living up north, for example in Sweden, I would like to find knitted products to keep me warm during the winter season. 
-* As a person interested in knitting I would like to have a look at someone elses creations, and buy something from this person to get inspiration of my own.
-* As a creative, mindful, environmental friendly person living up north I would rather buy handmade knitted products to support small local business owners instead of buying products from big companies. 
-*
+1. As a person living up north, for example in Sweden, I would like to find knitted products to keep me warm during the winter season. 
+2. As a person interested in knitting I would like to have a look at someone elses creations and buy a product to wear something inspiring. I also want to get inspiration from a blog, and share my own knowledge of this craft.
+3. As a creative, mindful person living up north I would rather buy handmade knitted products to support small local business owners with a personal touch, instead of buying products from big companies. 
+
 
 ## Features
 #### Existing Features
@@ -45,10 +45,11 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * The requirement to log in is activated and the user are redirected to the Login page when the user clicks on the Checkout button in the Cart page. A user can buy products only when he/she are logged in.
 * The user is also required to Login in and are redirected to the Login page when he/she clicks on the button Add Inspiration on the Inspire page.
 * On the Cart page the user can view the order, and also use the Amend button to change the quantity of the order. If the cart is empty the user can click on a button to redirect them to the Shop page. 
-* Checkout form to add customer details and credit card details
+* Checkout form to add customer details and credit card details. For the test functionality used in this project you can use these digits for the credit card number ´4242 4242 4242 4242´ and these for the CVV number	´111´ and these or any other credtit card date ´04/20´. 
 * Purchase the products with Stripe test functionality. 
 * Blog entries page, where the admin adds blogposts to inspire the users with knitting related topics.
-* 
+* Green alert messages are showing underneath the navbar when a user have been logged in, logged out, have registered, have payed, have sent an email. 
+* When a user add a product to the cart with the Add button in the Shop page the number of items are showing in the cart in the navbar. Every time the quantity is changed the number in the cart are directly corrected.
 
 
 #### Features left I would like to Implement
@@ -94,10 +95,14 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 
 ## Testing
 Here I present how my website meet the needs of the users that will visit the site, which I presented in the section UX: User stories:
+1. As a person living up north, for example in Sweden, I would like to find knitted products to keep me warm during the winter season. 
+2. As a person interested in knitting I would like to have a look at someone elses creations and buy a product to wear something inspiring. I also want to get inspiration from a blog, and share my own knowledge of this craft.
+3. As a creative, mindful person living up north I would rather buy handmade knitted products to support small local business owners with a personal touch, instead of buying products from big companies. 
 
-* 
-*
-*
+How I meet these needs:
+1. This need can be met with visiting the shop page, where you can search for specific products with the search function, and also see all products at once. How to add products to the cart, and to see how many items are added in the cart are made clear to the user. It´s easy to see the order in the cart page and how to proceed to the checkout page, and fill in the payment form. 
+2. This need can be met going to the Shop page to look at the shop owners creations and buy something that inspires the user, and on the Blog page the user can get inspiration. The user can also share his/hers own knowledge in the Inspire page where it´s possible to add posts to inspire others. 
+3. This need can be met with this kind of small shop that provides a personal, warm feeling that does not have a large amount of products that a large company would have. The shop owner also share some of her stories and feelings in the blog and in the product descriptions, which adds to the personal touch of the page.
 
 ### Validation of code
 - I used [this website](https://validator.w3.org/#validate_by_input) to validate my HTML by direct input.
@@ -108,7 +113,8 @@ Here I present how my website meet the needs of the users that will visit the si
 I used Responsinator to check the responsiveness of the page.
 
 - The webpage is responsive since I´m using Bootstrap 4 and it works good on smaller devices too. Yhe navbar collapse on smaller views with a standard navbar icon for smaller devices.
-- The title of the page inside of the navbar in the top left corner works in a responsive way with the navbar and takes the user back to the landing page when it´s clicked on. 
+- The title of the page inside of the navbar in the top left corner works in a responsive way with the navbar and takes the user back to the landing page when it´s clicked on.
+- 
 
 ### Testing process scenarios
 
@@ -138,7 +144,7 @@ Register form
 Contact form
 1. Click on the Contact page in the navbar.
 2. Fill in the fields, verify that they are required by leaving one out, and see that a text shows that says that you have to fill in that field.
-3. Click on the Submit button and verify that the form is not submitted, you are still on the page. (This is because this project did not require authentication, and is therefore something I´ll add later when there is time.)
+3. Click on the Submit button and verify that the form is not submitted, you are still on the page.
 
 ### Bugs I came across while creating the site and while testing it
 * 
