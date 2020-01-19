@@ -8,7 +8,7 @@
 <!-- Page heading here -->
 {% block page_heading %}
 <div class="row justify-content-center">
-   <div class="col-12 col-md-6">
+   <div class="col-12">
         <!-- Page Headline, so the user knows which page they are on -->
         <br>
         <h2 class="text-white text-center">Knitting Inspiration</h2>
@@ -19,33 +19,40 @@
 
 {% block content %}
 
-<div class="container mb-5">
+<div class="row">
+    <div class="col-md-12">
   <!-- Title section  -->  
-    <div class="sec-title p-b-52 mt-3 mb-4">
-        <h3 class="m-text5 t-center text-light">Share your knowledge</h3>
-        <p class="text-light">Let´s share that rich knitting knowledge to inspire one another. 
+        <h3 class="text-center text-light">Share your knowledge</h3>
+        <p class="text-light text-center">Let´s share that rich knitting knowledge to inspire one another. 
         If you have any advice, tips & trix or patterns you want to share with us all, just go for it and click on the button Add Inspiration!</p>
     </div>
-    
-
-    <!-- Here the user can add Inspiration to share -->
-    <div id="accordion">
-        {% for inspiration in inspirations %}   
-            <div class="card mb-3 rounded-0">
-                <div class="card-header" id="headingOne">
-                    <h5 class="mb-0 "> {{ inspiration.title }} </h5>
-                </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body text-light">
-                        {{ inspiration.content }}
-                    </div>
-                </div>
-            
-            </div>
-         {% endfor %}
-    </div>
-<!-- Button to add inspiration  -->
-    <a href="{% url 'add_inspiration' %}" class="btn btn-info rounded-1 btn-md" >Add Inspiration</a>
-
 </div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        
+    <!-- Here the user can see the shared Inspiration -->
+    {% for inspiration in inspiration %}     
+        <div class="card mb-3 w-75">
+                <h5 class="card-header">Inspiration</h5>
+                <div class="card-body">
+                <h5 class="card-title">{{ inspiration.title }}</h5>
+                <p class="card-text">{{ inspiration.content }}</p>
+                <div class="card-footer text-muted">{{ inspiration.published_date }}</div>
+                </div>
+        </div>
+    {% endfor %}
+       
+                        
+    </div>
+</div>
+    
+<div class="row">
+    <div class="col-12">
+       <!-- Button to add inspiration  -->
+       <a href="{% url 'add_inspiration' %}" class="btn btn-info rounded-1 btn-md" >Add Inspiration</a>
+    </div>
+</div>
+
 {% endblock %}
