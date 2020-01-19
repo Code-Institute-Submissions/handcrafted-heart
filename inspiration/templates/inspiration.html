@@ -23,8 +23,8 @@
     <div class="col-md-12">
   <!-- Title section  -->  
         <h3 class="text-center text-light">Share your knowledge</h3>
-        <p class="text-light text-center">Let´s share that rich knitting knowledge to inspire one another. 
-        If you have any advice, tips & trix or patterns you want to share with us all, just go for it and click on the button Add Inspiration!</p>
+        <p class="text-light text-center mx-auto w-75">Let´s share that rich knitting knowledge to inspire one another. 
+        If you have any advice, tips & trix or patterns you want to share with us all, if you want to edit a post click Edit Inspiration, and if you want to add new Inspiration click on the button Add Inspiration!</p>
     </div>
 </div>
 
@@ -40,6 +40,7 @@
                 <h5 class="card-title">{{ inspiration.title }}</h5>
                 <p class="card-text">{{ inspiration.content }}</p>
                 <div class="card-footer text-muted">{{ inspiration.published_date }}</div>
+                <a href="{% url 'edit_inspiration' inspiration.id %}" class="btn btn-sm btn-info">Edit Inspiration</a>
                 </div>
         </div>
     {% endfor %}
