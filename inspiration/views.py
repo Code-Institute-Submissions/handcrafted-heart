@@ -8,7 +8,6 @@ def get_inspiration(request):
         inspiration = Inspiration.objects.all()
         return render(request, "inspiration.html", {'inspiration': inspiration})
     
-        
 
 def inspiration_content(request, pk):
     if request.method == "GET":
