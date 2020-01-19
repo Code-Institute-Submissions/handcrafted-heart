@@ -2,12 +2,12 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-sm-10 col-md-9">
+        <div class="col-md-12">
             <h3>{{ inspiration.title }}</h3>
             <div class="row">
-                <div class="col-xs-9">
+                <div class="col-md-12">
                     <p>{{ inspiration.content }}</p>
-                    <a href="{% url 'get_inspiration' %}" class="btn btn-default">Back to Inspire Page</a>
+                    <a href="{% url 'get_inspiration' %}" class="btn btn-info">Back to Inspire Page</a>
                     <a href="{% url 'edit_inspiration' inspiration.id %}" class="btn btn-info">Edit Inspiration</a>
                     <hr>
                 </div>
