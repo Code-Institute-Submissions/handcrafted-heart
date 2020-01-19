@@ -26,6 +26,8 @@ from products.views import all_products
 from home.views import contact
 from posts import urls as urls_posts
 from posts.views import get_posts
+from inspiration import urls as urls_inspiration
+from inspiration.views import get_inspiration
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -40,6 +42,9 @@ urlpatterns = [
     url(r'^posts/', include('posts.urls')),
     url(r'^posts/', include(urls_posts)),
     url(r"^posts$", get_posts, name="get_posts"),
+    url(r'^suggestions/', include('suggestions.urls')),
+    url(r'^suggestions/', include(urls_inspiration)),
+    url(r"^suggestions$", get_inspiration, name="get_inspiration"),
     url(r'^search/', include(urls_search)),
     url(r'^home/', include(urls_home)),
     url(r'^contact/', contact, name='contact'),
