@@ -50,7 +50,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * Blog entries page, where the admin adds blogposts to inspire the users with knitting related topics.
 * Green alert messages are showing underneath the navbar when a user have been logged in, logged out, have registered, have payed, have sent an email. 
 * When a user add a product to the cart with the Add button in the Shop page the number of items are showing in the cart in the navbar. Every time the quantity is changed the number in the cart are directly corrected.
-
+* A carousel showing Featured products on the landing page.
 
 #### Features left I would like to Implement
 * In the future I want the users to be able to add comments to the shop owners blogposts, and possibly also stars to vote for the most inspirational posts.
@@ -85,11 +85,35 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * I used [Compressed JPEG](https://compressjpeg.com/) to compress images to take up less space in the S3 Bucket. 
 
 #### Databases
-* The relational database [PostgreSQL](https://www.postgresql.org/) was used for production database, which is provided by heroku.
+* The relational database [PostgreSQL](https://www.postgresql.org/) was used for production database, which is provided by Heroku.
 * [SQlite3](https://www.sqlite.org/index.html) was used for development database, which is provided by django.
 
 ## Information Architecture
 * The database structure..
+
+#### Data Models
+In the products app I have this model: 
+* Product 
+In the checkout app I have these models:
+* Order
+* OrderItem
+In the posts app I have this model:
+* BlogPost
+In the inspiration app I have this model:
+* Inspiration
+
+Example of the structure of one of the models:
+---
+BlogPost model
+---
+
+| Key in db      | FieldType     | Validation                                  |
+| -------------- |:-------------:| -------------------------------------------:|
+| title          | CharField     | max_length=200                              |
+| content        | TextField     |                                             |
+| created_date   | DateTimeField | auto_now_add=True                           |
+| published_date | DateTimeField | blank=True, null=True, default=timezone.now |
+| image          | ImageField    | upload_to="images", blank=True, null=True   |
 
 
 
