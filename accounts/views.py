@@ -4,6 +4,7 @@ from accounts.forms import UserLoginForm, UserRegistrationForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 
 # The views.
 
@@ -71,5 +72,4 @@ def register(request):
                 messages.error(request, "We are unable to register your account right now")
     else:
         registration_form = UserRegistrationForm()
-    return render(request, 'register.html', {
-        "registration_form": registration_form})
+    return render(request, 'register.html', {"registration_form": registration_form})
