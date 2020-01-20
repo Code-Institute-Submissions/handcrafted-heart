@@ -51,27 +51,27 @@ def profile(request):
     """A view to display the profile page of a logged in user"""
     return render(request, 'profile.html')
     
-    
+
 def register(request):
     """A view to manage the registration form"""
-    if request.method == 'POST':
-        user_form = UserRegistrationForm(request.POST)
-        if user_form.is_valid():
-            user_form.save()
+    if request.user.is_authenticated:
+        return redirect(reverse('index'))
 
-            user = auth.authenticate(request.POST.get('email'),
-                                     password=request.POST.get('password1'))
+    if request.method == "POST":
+        registration_form = UserRegistrationForm(request.POST)
 
+        if registration_form.is_valid():
+            registration_form.save()
+
+            user = auth.authenticate(username=request.POST['username'],
+                                     password=request.POST['password1'])
             if user:
-                auth.login(request, user)
-                messages.success(request, "You have successfully registered")
-                return redirect(reverse('index'))
-
+                auth.login(user=user, request=request)
+                messages.success(request, "You have now successfully registered and logged in!")
+                return render(request,  'index.html')
             else:
-                messages.error(request, "Unable to log you in at the moment!")
+                messages.error(request, "We are unable to register your account right now")
     else:
-        user_form = UserRegistrationForm()
-
-    args = {'user_form': user_form}
-    return render(request, 'register.html', args)
-    
+        registration_form = UserRegistrationForm()
+    return render(request, 'register.html', {
+        "registration_form": registration_form})
