@@ -48,9 +48,12 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * Checkout page displaying the products the user have put in the cart, and a Checkout form to add customer details and credit card details. For the test functionality with Stripe used in this project you can use these digits for the credit card number ´4242 4242 4242 4242´ and these for the CVV number	´111´ and any other expiration credit card date and year.
 * On the Inspire page the user can add own posts called Inspiration. The user can Add new inspiration, Edit an already existing Inspiration post and View Inspiration to see the post in an own page.
 * Blog entries page, where the admin adds blogposts to inspire the users with knitting related topics.
+* Blogposts are on the Blog page truncated in the cards, and when you click Read more you are redirected to a page where you can read the full blogpost.
 * Green alert messages are showing underneath the navbar when a user have been logged in, logged out, have registered, have payed, have sent an email. 
 * When a user add a product to the cart with the Add button in the Shop page the number of items are showing in the cart in the navbar. Every time the quantity is changed the number in the cart are directly corrected.
 * A carousel with 3 images showing Featured products on the landing page. Just to get a small glimpse of what the shop offers.
+* 
+* 
 
 #### Features left I would like to Implement
 * In the future I want the users to be able to add comments to the shop owners blogposts, and possibly also stars to vote for the most inspirational posts.
@@ -160,17 +163,29 @@ Add a product to the cart and amend the quantity
 5. Click on the Quantity field in the table and verify that the amount is changing in the table after clicking the amend button.
 6. Try and amend the products to 0, and verify that a text appears that says that the cart is empty, and a button that suggests to go back to the shop page.
 
-Inspire page functionality
+Inspire page functionality. Add, Edit and View.
+1. Click on the Inspire page in the navbar.
+2. Verify that you land on the Inspire page where you get three main options.
+3. Firstly, click on the button View inspiration to see the content in an own page. There you get two options; To click on the Back to Inspire page button and to click on the Edit inspiration button.
+4. Click on Back to Inspiration button and verify that you are redirected back to the main Inspire page.
+5. Click again on the View inspiration button in a post to try out the other button Edit Inspiration.
+6. Verify that you are redirected to the Add some inspiration page with the prefilled editable fields in the form.
+7. Change Title and Content, and verify that you are redirected back to the main Inspire page and that the Inspiration post has been updated.
+8. While back on the main Inspire page, click on the Add inspiration button and get redirected to a page with an empty form.
+9. Fill out the fields and click on Add inspiration button. Verify that you are redirected to the View Inspiration page, where you can read the post you just created and again are presented with the two button options to Go back to Inspire page and Edit Inspiration.
+10. At last, click on Go back to Inspire page and verify that the new post has been added. 
 
-Blog page
-
+Blog page. View posts.
+1. Click on Blog in the Navbar.
+2. Confirm that you see the blogposts displayed in a sort of liststyle with cards that stick together.
+3. Click on the button Read more and verify that you are redirected to a page where you can reag the full blogpost.
+4. Click on the button Go back to Blog and verify that you are now on the main Blog page again.
 
 Log in form
 1. Click on Login in the navbar
 2. On the Login page fill in the username and password fields.
 3. Click on the Login button and verify that you are getting a success message that tells you that you are logged in. 
 4. Go to the Profile page that now shows in the navbar and confirm that your user name and email is displayed along with the information about what you can do as logged in.
-
 
 Register form
 1. Click on Register in the navbar. 
