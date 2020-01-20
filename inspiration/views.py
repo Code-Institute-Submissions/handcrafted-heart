@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Inspiration
 from .forms import InspirationSharingForm
+from django.template.context_processors import csrf
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -32,4 +34,4 @@ def create_or_edit_inspiration(request, pk=None):
             return redirect('/inspiration/', {'inspiration': inspiration})
     else:
         form = InspirationSharingForm(instance=inspiration)
-    return render(request, 'inspirationform.html', {'form': form})
+    return render(request, 'inspirationform.html', {'form': form, 'inspiration': inspiration})
