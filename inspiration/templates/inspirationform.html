@@ -19,10 +19,9 @@
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-lg-8 mb-5">
-    <form class="text-light" method="POST" enctype="multipart/form-data" action="{% url 'add_inspiration' %}">
+    <form class="text-light" method="POST" enctype="multipart/form-data" action="{% url 'add_inspiration', inspiration.id %}">
         {% csrf_token %}
         {{ form | as_bootstrap }}
-        <input type="hidden" name="inspiration_id" value="{{inspiration.id}}"/>
         <button type="submit" class="btn btn-info rounded-1">Add Inspiration</button>
     </form>
     </div>
