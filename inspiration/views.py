@@ -34,7 +34,7 @@ def create_or_edit_inspiration(request, pk=None):
             if inspiration:
               inspiration.title = form.cleaned_data.get('title')
               inspiration.content = form.cleaned_data.get('content')
-              inspiration.title = form.cleaned_data.get('published_date')
+              inspiration.published_date = form.cleaned_data.get('published_date')
               inspiration.save()
               return render(request, 'inspiration.html', {'inspirations' : inspirations})
             else:
