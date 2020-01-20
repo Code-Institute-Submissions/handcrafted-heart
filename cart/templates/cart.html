@@ -18,13 +18,13 @@
 {% block content %}
 
 <!-- Shopping cart -->
-<div class="row justify-content-center">
+<div class="row justify-content-center bg-light text-dark mb-2">
 
     <!-- Cart content displayed in a table-->
-    <div class="col-12 col-md-8 col-lg-10">
+    <div class="col-12 col-md-8 col-lg-10 mx-auto">
         {% if product_count > 0 %}
         <table class="table">
-            <thead>
+            <thead class="border-bottom">
                 <tr>
                     <th scope="col" class="border-0 bg-light table_center">
                         <div class="p-2 px-3 text-uppercase">Product</div>
@@ -49,14 +49,14 @@
                         <div class="p-2">
                             <img src="{{ MEDIA_URL }}{{ item.product.image }}" alt="product" width="70" class="img-fluid rounded shadow-sm">
                             <div class="ml-3 d-inline-block align-middle">
-                                <h5 class="mb-0 d-inline-block align-middle text-light">{{ item.product.name }}</h5>
+                                <h5 class="mb-0 d-inline-block align-middle text-dark">{{ item.product.name }}</h5>
                             </div>
                         </div>
                     </th>
-                    <td class="border-0 align-middle table_center text-light"><strong>€ {{ item.product.price }}</strong></td>
-                    <td class="border-0 align-middle table_center text-light"><strong>{{item.quantity}}</strong></td>
+                    <td class="border-0 border-secondary align-middle table_center text-dark"><strong>€ {{ item.product.price }}</strong></td>
+                    <td class="border-0 align-middle table_center text-dark"><strong>{{item.quantity}}</strong></td>
                     <td class="border-0 align-middle table_center">
-                        <form class="text-center border border-light p-2" method="post" action="{% url 'adjust_cart' item.id %}">
+                        <form class="text-center border-0 p-2" method="post" action="{% url 'adjust_cart' item.id %}">
                             {% csrf_token %}
                             <div class="form-group mb-3">
                                 <label for="InputAmount" class="sr-only">Change Qty</label>
@@ -76,15 +76,15 @@
 
         </table>
         <!-- Order Summary -->
-        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold border-bottom">Order summary </div>
         <div class="p-4">
-            <p class="font-italic mb-4 text-light">Shipping and additional costs are included in the Product prices.
+            <p class="font-italic mb-4 text-dark">Shipping and additional costs are included in the Product prices.
             </p>
             <!-- Shows the Total of the products in the cart, and the user are able to proceed to Checkout -->
             <ul class="list-unstyled mb-4">
-                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-light">Total Amount
+                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-dark">Total Amount
                         </strong>
-                    <h5 class="font-weight-bold text-light">€ {{ total }}</h5>
+                    <h5 class="font-weight-bold text-dark">€ {{ total }}</h5>
                 </li>
             </ul><a href="{% url 'checkout' %}" class="btn btn-success text-white">Checkout</a>
         </div>
