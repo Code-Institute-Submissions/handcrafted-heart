@@ -14,17 +14,18 @@
 </div>
 {% endblock %}
 
-
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-lg-8 mb-5">
-    <form class="text-light" method="POST" enctype="multipart/form-data" action="{% url 'edit_inspiration' %}">
-        {% csrf_token %}
-        {{ form | as_bootstrap }}
-        <button type="submit" class="btn btn-info rounded-1">Add the edited Inspiration</button>
-    </form>
+    <div class="row">
+        <div class="col-sm-10 col-md-9">
+            <h3>{{ inspiration.title }}</h3>
+            <div class="row">
+                <div class="col-xs-9">
+                    <p>{{ inspiration.content }}</p>
+                    <a href="{% url 'get_inspiration' %}" class="btn btn-default">Back to Inspire Page</a>
+                    <a href="{% url 'edit_inspiration' inspiration.id %}" class="btn btn-default">Edit Inspiration</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-
 {% endblock %}
