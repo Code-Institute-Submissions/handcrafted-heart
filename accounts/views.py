@@ -65,8 +65,8 @@ def register(request):
                                      password=request.POST['password1'])
             if user:
                 auth.login(user=user, request=request)
-                messages.success(request, "You have now successfully registered and logged in!")
-                return render(request,  'index.html')
+                messages.success(request, "You have successfully registered and are now logged in!")
+                return render(request, 'index.html')
             else:
                 messages.error(request, "We are unable to register your account right now")
     else:
