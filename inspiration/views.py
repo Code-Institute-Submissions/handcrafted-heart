@@ -30,8 +30,15 @@ def create_or_edit_inspiration(request, pk=None):
     if request.method == "POST":
         form = InspirationSharingForm(request.POST, request.FILES, instance=inspiration)
         if form.is_valid():
-            inspiration = form.save()
-            return redirect('/inspiration/', {'inspiration': inspiration})
-    else:
-        form = InspirationSharingForm(instance=inspiration)
-    return render(request, 'inspirationform.html', {'form': form, 'inspiration': inspiration})
+            if inspiration:
+              inspiration.title = form.cleaned_data.get('title')
+              inspiration.content = form.cleaned_data.get('content')
+              inspiration.title = form.cleaned_data.get('published_date')
+              inspiration.save()
+            else:
+              inspiration = form.save()
+              return redirect('/inspiration/', {'inspiration': inspiration})
+        else:
+          form = InspirationSharingForm(instance=inspiration)
+        return render(request, 'inspirationform.html', {'form': form, 'inspiration': inspiration})
+    
