@@ -164,15 +164,19 @@ Inspire page functionality
 
 Blog page
 
+
 Sign in form
 
 
 Register form
+1. Click on Register in the navbar. 
+2. Fill in the fields, and try and leave one out, one by one at a time, to verify that a text shows that says that you have to fill in that empty field.
+3. Click on the Register button and verify that you get a message that tells you that you are now registered and logged in, and that you are redirected to the index page.
 
 Contact form
 1. Click on the Contact page in the navbar.
-2. Fill in the fields, verify that they are required by leaving one out, and see that a text shows that says that you have to fill in that field.
-3. Click on the Submit button and verify that the form is not submitted, you are still on the page.
+2. Fill in the fields, verify that they are required by leaving one out at a time, and see that a text shows that says that you have to fill in that empty field.
+3. Click on the Send button and verify that you are getting a message that says that your message has been sent.
 
 ### Bugs I came across while creating the site and while testing it
 * Example of an error message I got from the console when adding blogposts from the backend logged in as admin. """Failed to load resource: the server responded with a status of 404 ()  blogpostimg3-min.jpg'):1""" The images is stored in the images file in the AWS S3 Bucket and was not showing at first. 
