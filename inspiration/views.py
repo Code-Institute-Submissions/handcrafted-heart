@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from .models import Inspiration
 from .forms import InspirationSharingForm
@@ -37,8 +37,8 @@ def create_or_edit_inspiration(request, pk=None):
               inspiration.save()
             else:
               inspiration = form.save()
-              return redirect('/inspiration/', {'inspiration': inspiration})
-        else:
-          form = InspirationSharingForm(instance=inspiration)
-        return render(request, 'inspirationform.html', {'form': form, 'inspiration': inspiration})
+              return redirect('inspiration_content', inspiration.pk)
+    else:
+        form = InspirationSharingForm(instance=inspiration)
+    return render(request, 'inspirationform.html', {'form': form, 'inspiration': inspiration})
     
