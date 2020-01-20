@@ -25,9 +25,7 @@
                     <hr>
                     
                     <p> {{ post.published_date }} </p>
-               <!--     <img class="img-fluid" src="media/images/{{ post.image }}">  -->
-                 <!--    <img class="img-fluid" src="/media/{{ post.image }}">  -->
-                    <img class="img-fluid" src="url('{{ MEDIA_URL }}{{ post.image }}')">
+                    <img class="img-fluid" src="{{ MEDIA_URL }}{{ post.image }}">
                      <hr> 
             
                     <p class="lead">{{ post.content|truncatewords:30 }}</p>

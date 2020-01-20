@@ -24,7 +24,7 @@
             <hr>
 
             {% if post.image %}
-                <img class="img-fluid rounded" src="/media/{{ post.image }}">
+                <img class="img-fluid rounded" src="{{ MEDIA_URL }}{{ post.image }}">
             {% endif %}
             <hr>
             <p class=""> {{ post.content }} </p>
