@@ -15,9 +15,9 @@
 
 <!-- Blog Posts full content -->
 {% block content %}
-    <div class="row justify-content-center text-light">
+    <div class="row justify-content-center text-dark ml-1 mr-1">
       <!-- Post Content Column -->
-        <div class="col-lg-8 mb-5">
+        <div class="col-lg-8 mb-5 bg-light rounded">
             <h1 class="mt-4"> {{ post.title }} </h1>
             <hr>
             <p>Posted: {{ post.published_date }}</p>
@@ -36,7 +36,7 @@
               </footer>
             </blockquote>
             
-            <a href="{% url 'get_posts' %}" class="btn btn-info rounded-1">Go back to Blog</a>
+            <a href="{% url 'get_posts' %}" class="btn btn-info rounded-1 mb-3">Go back to Blog</a>
     
         </div>
     </div>
