@@ -92,15 +92,15 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * The database structure..
 
 #### Data Models
-In the products app I have this model: 
-* Product 
-In the checkout app I have these models:
-* Order
-* OrderItem
-In the posts app I have this model:
-* BlogPost
-In the inspiration app I have this model:
-* Inspiration
+* In the `products` app I have this model: 
+1. Product 
+* In the `checkout` app I have these models:
+1. Order
+2. OrderItem
+* In the `posts` app I have this model:
+1. BlogPost
+* In the `inspiration` app I have this model:
+1. Inspiration
 
 Example of the structure of one of the models:
 ---
