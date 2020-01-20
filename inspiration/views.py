@@ -8,8 +8,8 @@ from django.contrib.auth.models import User
 # Create your views here.
 
 def get_inspiration(request):
-        inspirations = Inspiration.objects.all()
-        return render(request, "inspiration.html", {'inspirations': inspirations})
+    inspirations = Inspiration.objects.all()
+    return render(request, "inspiration.html", {'inspirations': inspirations})
     
 @login_required()
 def inspiration_content(request, pk):
