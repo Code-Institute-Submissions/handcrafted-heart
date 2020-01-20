@@ -57,7 +57,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * If I have had more time with the project I would have added the functionality to click on a product to view it in a new tab, and add more information about the product to read more about it there.
 * If I have had more time I would also have wanted to add a commenting system for the users Inspiration posts on the Inspire page to give eachother feedback and start discussions. 
 * Add a message on the Shop page "No products found that matched the word you searched for" when a user have searched for a word, such as hockey, that does not match any products.
-*
+* Add a message if a user tries to register with an email that another user already uses for an account. When trying this now, nothing happends, the page just remains the same. I want to add an error message here that tells the user that the email already exists for another user account. 
 
 
 ## Technologies Used
@@ -165,13 +165,18 @@ Inspire page functionality
 Blog page
 
 
-Sign in form
+Log in form
+1. Click on Login in the navbar
+2. On the Login page fill in the username and password fields.
+3. Click on the Login button and verify that you are getting a success message that tells you that you are logged in. 
+4. Go to the Profile page that now shows in the navbar and confirm that your user name and email is displayed along with the information about what you can do as logged in.
 
 
 Register form
 1. Click on Register in the navbar. 
 2. Fill in the fields, and try and leave one out, one by one at a time, to verify that a text shows that says that you have to fill in that empty field.
 3. Click on the Register button and verify that you get a message that tells you that you are now registered and logged in, and that you are redirected to the index page.
+4. Go to the Profile page that now shows in the navbar and confirm that your user name and email is displayed along with the information about what you can do as logged in.
 
 Contact form
 1. Click on the Contact page in the navbar.
@@ -179,7 +184,7 @@ Contact form
 3. Click on the Send button and verify that you are getting a message that says that your message has been sent.
 
 ### Bugs I came across while creating the site and while testing it
-* Example of an error message I got from the console when adding blogposts from the backend logged in as admin. """Failed to load resource: the server responded with a status of 404 ()  blogpostimg3-min.jpg'):1""" The images is stored in the images file in the AWS S3 Bucket and was not showing at first. 
+* Example of an error message I got from the console when adding blogposts from the backend logged in as admin. The error message from the running link from the development environment: """Failed to load resource: the server responded with a status of 404 ()  blogpostimg3-min.jpg'):1""" and the error message showed in the console when running the app from Heroku: "GET https://handcrafted-heart.herokuapp.com/url('https://handcrafted-heart.s3.amazonaws.com/media/images/blogpostimg1-min.jpg') 404 (Not Found)" The images is stored in the images file in the AWS S3 Bucket and was not showing at first. 
 * The register form to register a new user was at first not functioning. After filled out all of the required fields, and clicked the submit button nothing happend, only that the two password fields cleaned up empty, but no successmessage was shown.
 
 #### A small example of one of the debugging processes
