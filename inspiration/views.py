@@ -25,6 +25,8 @@ def inspiration_content(request, pk):
 
 @login_required()
 def create_or_edit_inspiration(request, pk=None):
+    inspirations = Inspiration.objects.all()
+    
     inspiration = get_object_or_404(Inspiration, pk=pk) if pk else None
     if request.method == "POST":
         form = InspirationSharingForm(request.POST, request.FILES, instance=inspiration)
@@ -34,6 +36,7 @@ def create_or_edit_inspiration(request, pk=None):
               inspiration.content = form.cleaned_data.get('content')
               inspiration.title = form.cleaned_data.get('published_date')
               inspiration.save()
+              return render(request, 'inspiration.html', {'inspirations' : inspirations})
             else:
               inspiration = form.save()
               return redirect('inspiration_content', inspiration.pk)
