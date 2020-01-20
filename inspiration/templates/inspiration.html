@@ -33,7 +33,7 @@
     <div class="col-md-12">
         
     <!-- Here the user can see the shared Inspiration -->
-    {% for inspiration in inspiration %}     
+    {% for inspiration in inspirations %}
         <div class="card mb-3 w-75 mx-auto">
                 <h5 class="card-header">Inspiration</h5>
                 <div class="card-body">
@@ -41,6 +41,7 @@
                 <p class="card-text">{{ inspiration.content }}</p>
                 <div class="card-footer text-muted">{{ inspiration.published_date }}</div>
                 <a href="{% url 'edit_inspiration' inspiration.id %}" class="btn btn-sm btn-info">Edit Inspiration</a>
+                <a href="{% url 'inspiration_content' inspiration.id %}" class="btn btn-sm btn-info">View Inspiration</a>
                 </div>
         </div>
     {% endfor %}
