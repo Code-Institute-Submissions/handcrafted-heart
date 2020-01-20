@@ -38,25 +38,25 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * The navbar contains the name of the web application and the pages you can click on to visit. The pages are named clearly.
 * When a user is logged in the Profile and Logout link is showing in the navbar, but if a user is Logged out the Login and Register links are showing instead. All of the other links are showing all the time.
 * The search box to search for specific products by keayword is placed underneath the heading. Underneath the search box there is a button to view all the products, this is placed here to direct the user as a natural step to see all of the products at once again after the search for a specific product, if wished.
-* The products and the details about them are shown in with cards, in a responsive way. The user can click on the quantity field to choose between the amount from 1 to 5, and are then able to add it to the cart with the Add button.
+* The products and the details about them are shown in with cards, in a responsive way. The user can click on the quantity field to choose between the amount from 1 to 5, and are then able to add it to the cart with the Add button. The amount is set to 5 as max since this is a small store with one person that makes the products by hand.
 * The fields in the forms are required so the user won´t be able to submit the forms until all of the fields are filled in.
 * The name of the webpage is placed in the top left corner of the navbar as good common pratcice, and are clickable and leads to the landing page. The navbar collapse to a burger icon on smaller devices and are placed in the top right corner.
 * The page has authentication functionality in the sign in and the registration forms.
 * The requirement to log in is activated and the user are redirected to the Login page when the user clicks on the Checkout button in the Cart page. A user can buy products only when he/she are logged in.
-* The user is also required to Login in and are redirected to the Login page when he/she clicks on the button Add Inspiration on the Inspire page.
+* The user is also required to Login and are redirected to the Login page when he/she clicks on the button Add Inspiration on the Inspire page.
 * On the Cart page the user can view the order, and also use the Amend button to change the quantity of the order. If the cart is empty the user can click on a button to redirect them to the Shop page. 
-* Checkout form to add customer details and credit card details. For the test functionality used in this project you can use these digits for the credit card number ´4242 4242 4242 4242´ and these for the CVV number	´111´ and these or any other credtit card date ´04/20´. 
-* Purchase the products with Stripe test functionality. 
+* Checkout page displaying the products the user have put in the cart, and a Checkout form to add customer details and credit card details. For the test functionality with Stripe used in this project you can use these digits for the credit card number ´4242 4242 4242 4242´ and these for the CVV number	´111´ and any other expiration credit card date and year.
+* On the Inspire page the user can add own posts called Inspiration. The user can Add new inspiration, Edit an already existing Inspiration post and View Inspiration to see the post in an own page.
 * Blog entries page, where the admin adds blogposts to inspire the users with knitting related topics.
 * Green alert messages are showing underneath the navbar when a user have been logged in, logged out, have registered, have payed, have sent an email. 
 * When a user add a product to the cart with the Add button in the Shop page the number of items are showing in the cart in the navbar. Every time the quantity is changed the number in the cart are directly corrected.
-* A carousel showing Featured products on the landing page.
+* A carousel with 3 images showing Featured products on the landing page. Just to get a small glimpse of what the shop offers.
 
 #### Features left I would like to Implement
 * In the future I want the users to be able to add comments to the shop owners blogposts, and possibly also stars to vote for the most inspirational posts.
-* If I have had more time with the project I would have added the functionality to click on a product to view it in a new tab, and add more information about the product to read there. 
-* If I have had more time I would also have wanted to add a commenting system for the users Inspiration posts to give eachother feedback and start discussions. 
-* 
+* If I have had more time with the project I would have added the functionality to click on a product to view it in a new tab, and add more information about the product to read more about it there.
+* If I have had more time I would also have wanted to add a commenting system for the users Inspiration posts on the Inspire page to give eachother feedback and start discussions. 
+* Add a message on the Shop page "No products found that matched the word you searched for" when a user have searched for a word, such as hockey, that does not match any products.
 *
 
 
@@ -144,21 +144,25 @@ I used Responsinator to check the responsiveness of the page.
 
 #### Manual testing
 
-Example
--Search for products Select menu and -Search- button
-1. Click on the dropdown menu.
-2. Choose a category.
+-Search for products by keyword in the product page, and View all button
+1. Click on the searchfield that says Search for products.
+2. Write for example the word hat.
 3. Click on the search button.
-4. Try this with all of the categories one by one, and verify that results with products are showing if the chosen ccategory matches the products shown.
-5. Verify that the text "No products found" is showing, if no products exist in the database from the chosen product.
+4. Verify that one or several products are being displayed that matches the keyword searched for.
+5. Try to search for a word you know won´t match the products, for example the word hockey, and verify that no products are showing up.
+6. Click on the View all button to verify that all products are showing again. 
 
+Add a product to the cart and amend the quantity
+1. Click on a products Quantity field and choose a number from 1 to 5. 
+2. Verify that the numebr appears in the cart icon in the navbar. 
+3. Add another product and verify that the amount in the cart icon is added and is showing the exact number of added products.
+4. Click on the cart in the navbar and verify that the amount is correct when viewing the products in the cart summary order table.
+5. Click on the Quantity field in the table and verify that the amount is changing in the table after clicking the amend button.
+6. Try and amend the products to 0, and verify that a text appears that says that the cart is empty, and a button that suggests to go back to the shop page.
 
-Add a product to the cart
-1. 
-2. 
-3. 
-4.  
+Inspire page functionality
 
+Blog page
 
 Sign in form
 
@@ -171,8 +175,8 @@ Contact form
 3. Click on the Submit button and verify that the form is not submitted, you are still on the page.
 
 ### Bugs I came across while creating the site and while testing it
-* 
-*
+* Example of an error message I got from the console when adding blogposts from the backend logged in as admin. """Failed to load resource: the server responded with a status of 404 ()  blogpostimg3-min.jpg'):1""" The images is stored in the images file in the AWS S3 Bucket and was not showing at first. 
+* The register form to register a new user was at first not functioning. After filled out all of the required fields, and clicked the submit button nothing happend, only that the two password fields cleaned up empty, but no successmessage was shown.
 
 #### A small example of one of the debugging processes
 * 
@@ -230,7 +234,7 @@ and then modified for my own needs.
 * The footer code snippet is copied from [this page](https://mdbootstrap.com/docs/jquery/navigation/footer/) and then modified for my needs.
 
 ### Media
-* On this webpage I´m using photos from [Unsplash](https://unsplash.com/), according to their [Unsplash licence](https://unsplash.com/license).
+* On this webpage I´m using jpg images from [Unsplash](https://unsplash.com/), according to their [Unsplash licence](https://unsplash.com/license).
 * 
 
 ### Acknowledgements
