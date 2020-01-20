@@ -17,31 +17,62 @@
 {% endblock %}
 
 
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center">
+    <div class="col-12">
+        <!-- Page Headline, to show the user which page they are on -->
+        <h2 class="text-light text-center products_heading">Checkout form</h2>
+        <br>
+    </div>
+</div>
+{% endblock %}
+
+
 {% block content %}
-
-<!-- contents of shopping cart -->
-<div class="row row-flex">
-    {% for item in cart_items %}
-        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
-            <div class="panel-body">
-                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-
-                <div class="caption">
-                    <h3>{{ item.product.name }}</h3>
-                    <p class="product-description">{{ item.product.description }}</p>
-                    <p>{{ item.quantity }}</p>
-                    <p>{{item.product.price}}</p>
-                </div>
-            </div>
-        </div>
-    {% endfor %}
+<!-- The products the user will buy displayed in a table-->
+<div class="row justify-content-center bg-light text-dark mb-2">
+    <div class="col-12 col-md-8 col-lg-10 mx-auto">
+        <table class="table">
+            <thead class="border-bottom">
+                <tr>
+                    <th scope="col" class="border-0 bg-light table_center">
+                        <div class="p-2 px-3 text-uppercase">Product</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light table_center">
+                        <div class="py-2 text-uppercase">Price</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light table_center">
+                        <div class="py-2 text-uppercase">Quantity</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- A for loop that runs through all items in the cart to display on checkout page-->
+                {% for item in cart_items %}
+                <tr>
+                    <th scope="row" class="border-0 table_left">
+                        <div class="p-2">
+                            <img src="{{ MEDIA_URL }}{{ item.product.image }}" alt="product" width="50" class="img-fluid rounded shadow-sm">
+                            <div class="ml-3 d-inline-block align-middle">
+                                <h5 class="mb-0 d-inline-block align-middle text-dark">{{ item.product.name }}</h5>
+                            </div>
+                        </div>
+                    </th>
+                    <td class="border-0 border-secondary align-middle table_center text-dark"><strong>€ {{ item.product.price }}</strong></td>
+                    <td class="border-0 align-middle table_center text-dark"><strong>{{item.quantity}}</strong></td>
+                    <td class="border-0 align-middle table_center">
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+</div>
 </div>
 
-<div class="row">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-</div>
 
+<div class="row justify-content-center text-dark mb-2">
+    <div class="col-md-12 mx-auto bg-light">
 <!-- the order form and the payment form with a submit button -->
 <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
     <legend>Payment Details</legend>
@@ -53,11 +84,11 @@
     </div>
 
     <!-- the forms put side by side on medium screen sizes and bigger -->
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
         {{ order_form | as_bootstrap }}
     </div>
 
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
         {{ payment_form | as_bootstrap }}
     </div>
 
@@ -66,4 +97,7 @@
         <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
     </div>
 </form>
+</div>
+</div>
+
 {% endblock %}
