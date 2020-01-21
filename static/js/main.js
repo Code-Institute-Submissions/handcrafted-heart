@@ -1,12 +1,9 @@
-/* $(document).ready(function () {
+$(document).ready(function () {
     
-    /* Initializes the carousel and cycles through the items from left to right */
+    // When the user clicks on a link in the navbar on smaller screens the navbar collapse.
     
- /*   $('.carousel').carousel({
-        interval: 5000,
-        touch: true
-    });
+     $('.navbar-nav a').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
     
-    $('.carousel').carousel('cycle');
-    
-})   */
+});
