@@ -17,12 +17,15 @@ After doing research looking at websites with knitted products I found that ther
 
 * To make the design suitable for people who wants to find knitted products in an easy way. I wanted to do this with a stylistic and easily understandable design with warm colors and buttons with clear directions.
 * To make a web application with several pages, each with it´s clear purpose, and this with a user friendly and easy layout for the user to quick be able to understand what you can do and how.
-* The fonts that I chose to use for this website provides an artistic feeling, but are at the same time easy to read, which I think suits the purpose of the page, and it´s audience.
+* The fonts from Google Fonts that I chose to use for this website `Alegreya', serif` provides an artistic feeling, but are at the same time easy to read, which I think suits the purpose of the page and it´s audience.
 * I chose to use..
 * 
 * I chose the name of the page to be Handcrafted heart, which are supposed to give the customers a personal and warm experience when visiting the page, also some of the products descriptions are a bit more warm and personal to enrich this experience.
 
-This handles the CRUD functionality (Create, Read, Update and Delete) and I planned for this web page to give a sense of.. 
+Add the color design choices here:
+* Color for the navbar: #f9d5bb
+* Color for the footer: 
+* * Color for the carousel: 
 
 ### Wireframes
 The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. All of the pages are showed as I planned them and one example of mobile view can be found on the last page in the document. [Check them out here!](add link to the wireframes)
