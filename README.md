@@ -86,6 +86,11 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * [AWS S3 Bucket](https://aws.amazon.com/s3/) to store images that was entered into the database.
 * [GMAIL SMTP](https://docs.djangoproject.com/en/3.0/ref/settings/#email-backend) was installed and set with specific settings to be used for the function to send emails within this app to users. You can read more [here](https://docs.djangoproject.com/en/3.0/topics/email/).
 * I used [Compressed JPEG](https://compressjpeg.com/) to compress images to take up less space in the S3 Bucket. 
+* [This](https://favicon.io/favicon-generator/) is the page where I generated the favicon from. 
+* I have used [Cripsy forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html) for the contact form, and django-forms for the other forms.
+
+
+
 
 #### Databases
 * The relational database [PostgreSQL](https://www.postgresql.org/) was used for production database, which is provided by Heroku.
