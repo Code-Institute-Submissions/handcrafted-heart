@@ -9,6 +9,12 @@
     <!-- Bootstrap css --> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Scripts for Bootstrap --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
+    
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
     <!-- Customised CSS -->
@@ -18,7 +24,7 @@
     <link rel="shortcut icon" type="image/png" href="static/img/favicon.ico"> 
     
     <!-- Checkout JS for Stripe -->
-    {% block head_js %} {% endblock head_js %}
+    {% block head_js %} {% endblock %}
     
     <!-- Page Title, with template injection -->
     <title>{% block page_title %}{% endblock %}</title>
@@ -104,25 +110,20 @@
             <!-- Login, Register and Contact forms, users Profile, Shop, Cart -->
             {% block content %}
             {% endblock %}
-            
+        
+        </div>
     </div>
-    </div>
-
     
-     <!-- Container to show About info and Featured Products -->
-    <div class="container-fluid ">
-        
-         <!-- Row for About_me block content -->
-        {% block about_content %}
-        {% endblock %}
+     <!-- Second container, with About me and Featured products content -->
+     <div class="container-fluid ">
+     <!-- Row for About_me block content -->
+            {% block about_content %}
+            {% endblock %}
 
-        <!-- Row for Featured Products block content -->
-        {% block featured_products %}
-        {% endblock %}
-        
-    </div>
-
-
+            <!-- Row for Featured Products block content -->
+            {% block featured_products %}
+            {% endblock %}
+     </div>
 
     <!-- Footer. Example copied from https://mdbootstrap.com/docs/jquery/navigation/footer/ and modified for my needs. -->
   <footer class="page-footer sticky-footer font-small darken-3 footer-details">
@@ -165,11 +166,6 @@
  </footer>
 <!-- Footer -->
 
-
-    <!-- Scripts for Bootstrap --> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
 
 
     <!-- Custom js -->
