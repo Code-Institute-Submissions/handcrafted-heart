@@ -11,10 +11,6 @@ body {
     flex-direction: column;
 }
 
-/* .container-fluid {
-    flex: 1 0 auto;
-} */
-
 
 /*-------Navbar ------------------------------------------------------ */
 
@@ -23,7 +19,7 @@ body {
 } 
 
 
-/* -------- Label, badge for Cart in Navbar ----------*/
+/* -------- Label, badge for Cart in Navbar ---------*/
 
 .badge {
     padding-left: 9px;
@@ -81,14 +77,14 @@ body {
 }
 
 
-/*---------- About Me section ---------------------------------------- */
+/*---------- About Me section ----------------------------------------- */
  .about_section {
     padding: 50px 20px;
 } 
 
 
 
-/*------ Featured Products section ----------------------------------- */
+/*------ Featured Products section ------------------------------------ */
 
 /*-----images for featured products row-----*/
 
@@ -122,7 +118,7 @@ body {
 }
 
 
-/*------------Shop page content---------------------------------- */
+/*------------Shop page content----------------------------------------- */
 
 
 /*--- Search btn ----*/
@@ -183,20 +179,20 @@ different product descriptions. */
 }
 
 
-/*---------- Contact form -------------------------------------------*/
+/*---------- Contact form ----------------------------------------------*/
 
 .contact_btn {
     margin-bottom: 15px;
 }
 
 
-/*----------- Blog image ----------------------------------------------*/
+/*----------- Blog image -----------------------------------------------*/
 
 .img-fluid {
     align-content: center;
 }
 
-/*---------- Footer ---------------------------------------------------*/
+/*---------- Footer ----------------------------------------------------*/
 
 .page-footer {
     background-color: #cccccc;
