@@ -2,6 +2,9 @@
 
 html, body {
   height: 100%;
+  
+  /* makes a smooth scroll (not supported in firefox and explorer) */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -203,4 +206,5 @@ different product descriptions. */
 
 .footer-details a {
     color: #6c757d;
+    font-size: small;
 }
