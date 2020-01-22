@@ -5,5 +5,8 @@ $(document).ready(function () {
      $('.navbar-nav a').click(function(){
             $(".navbar-collapse").collapse('hide');
         });
-    
+     
+     // Get the current year for Copyright in the footer.
+     $("#current-year").html(new Date().getFullYear());
+     
 });
