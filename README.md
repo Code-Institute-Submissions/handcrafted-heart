@@ -172,6 +172,10 @@ Add a product to the cart and amend the quantity
 5. Click on the Quantity field in the table and verify that the amount is changing in the table after clicking the amend button.
 6. Try and amend the products to 0, and verify that a text appears that says that the cart is empty, and a button that suggests to go back to the shop page.
 
+Checkout page functionality
+1. Verify that you can see an overview of your products you added to the cart.
+2. Fill in the fields in the form, and verify that the Required textmessage appears when leaving a field out and try to submit, try one by one.
+
 Inspire page functionality. Add, Edit and View.
 1. Click on the Inspire page in the navbar.
 2. Verify that you land on the Inspire page where you get three main options.
