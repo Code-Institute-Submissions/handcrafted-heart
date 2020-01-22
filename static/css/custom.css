@@ -86,7 +86,6 @@ body {
     background-color: #f6f4e6;
     background-size: cover;
     width: 100%;
-    height: 60vh;
     margin: auto;
     z-index: -1;
     padding: 0px;
@@ -194,3 +193,10 @@ different product descriptions. */
     align-content: center;
 }
 
+/*---------- Footer --------------*/
+
+.footer-details a {
+    color: #6c757d;
+    text-decoration: none;
+    background-color: transparent;
+}
