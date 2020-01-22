@@ -174,7 +174,9 @@ Add a product to the cart and amend the quantity
 
 Checkout page functionality
 1. Verify that you can see an overview of your products you added to the cart.
-2. Fill in the fields in the form, and verify that the Required textmessage appears when leaving a field out and try to submit, try one by one.
+2. Fill in the textfields in the form, and verify that the Required textmessage appears when leaving a field out and try to submit, try one by one.
+3. When you will fill in the fields for the numbers, the credit card nr, the CVV nr, **please note** that there is a bug here, described in the Bugs section.
+4. If you fill in all the fields, you get the message that the payment was successful. If you leave one of those two fields out, you Also get a message that the payment was successful, and the test payment went through and registered on the Stripe website in the Test data.
 
 Inspire page functionality. Add, Edit and View.
 1. Click on the Inspire page in the navbar.
@@ -215,8 +217,11 @@ Contact form
 * Example of an error message I got from the console when adding blogposts from the backend logged in as admin. The error message from the running link from the development environment: """Failed to load resource: the server responded with a status of 404 ()  blogpostimg3-min.jpg'):1""" and the error message showed in the console when running the app from Heroku: "GET https://handcrafted-heart.herokuapp.com/url('https://handcrafted-heart.s3.amazonaws.com/media/images/blogpostimg1-min.jpg') 404 (Not Found)" The images is stored in the images file in the AWS S3 Bucket and was not showing at first. 
 * The register form to register a new user was at first not functioning. After filled out all of the required fields, and clicked the submit button nothing happend, only that the two password fields cleaned up empty, but no successmessage was shown.
 
-#### A small example of one of the debugging processes
-* 
+* One bug discovered not yet solved is that when you leave one field out in the payment form, leaving one of the number fields out, for example the CVV field, the form is submitted anyway, and you get a success message that the payment was successful. 
+1. This is not yet solved. As the fields in the form in the forms.py file in the checkout app was set to required=False, I tried to change these to True. This though, gave an error message that the payment was not successful. 
+2. I tried to add `required` to the html code, but as the forms are loaded with `payment_form | as_bootstrap` with no input fields, adding the required did not make any difference.
+3. Which result in that it´s currently possible to pay with Stripe´s test functionality with all fields filled in, but also with one of the number fields Not filled in. 
+
 
 ## Deployment
 
