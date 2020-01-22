@@ -6,7 +6,7 @@ The idea of this web page is that.. My aim is that..
 
 This page is made for an imaginary shop owner from Sweden, Sarah, a small business owner who makes knitted handcrafted products and sell them. The purpose of the products are for warming during winter time up north.
 To buy warm products knitted by hand and to get inspiration through the blog and to share inspiration of yout own is all combined in this web application.
-[Check it out here!]()
+[Check it out here!](https://handcrafted-heart.herokuapp.com/)
 
 ![Handcrafted heart img](the link to the am i responsive webpage image "The handcrafted heart image")
 
@@ -18,8 +18,6 @@ After doing research looking at websites with knitted products I found that ther
 * To make the design suitable for people who wants to find knitted products in an easy way. I wanted to do this with a stylistic and easily understandable design with discrete and warm colors, and buttons with clear directions.
 * To make a web application with several pages, each with it´s clear purpose, and this with a user friendly and easy layout for the user to quick be able to understand what you can do and how.
 * The fonts from Google Fonts that I chose to use for this website `Alegreya', serif` provides an artistic feeling, but are at the same time easy to read, which I think suits the purpose of the page and it´s audience.
-* I chose to use..
-* 
 * I chose the name of the page to be Handcrafted heart, which are supposed to give the customers a personal and warm experience when visiting the page, also some of the products descriptions are a bit more warm and personal to enrich this experience.
 
 My discrete & warm color design choices goes well together with the background image, and are listed here:
@@ -81,7 +79,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 *
 
 #### Tools
-* [AWS Cloud9 IDE](https://aws.amazon.com/cloud9/) for the development of this site: writing, debugging and running my code. GIT was then used to push files to Github.
+* [AWS Cloud9 IDE](https://aws.amazon.com/cloud9/) for the development of this site: writing, debugging and running my code. **GIT** was then used to push files to Github.
 * [GitHub](https://github.com/) to store and share the project remotely.
 * the database
 * [Balsamiq](https://balsamiq.com/) to create my wireframes as a part of the design process, with a simple yet goodlooking result.
@@ -156,7 +154,7 @@ I used Responsinator to check the responsiveness of the page.
 
 #### Manual testing
 
--Search for products by keyword in the product page, and View all button
+**Search for products by keyword in the product page, and View all button**
 1. Click on the searchfield that says Search for products.
 2. Write for example the word hat.
 3. Click on the search button.
@@ -164,7 +162,7 @@ I used Responsinator to check the responsiveness of the page.
 5. Try to search for a word you know won´t match the products, for example the word hockey, and verify that no products are showing up.
 6. Click on the View all button to verify that all products are showing again. 
 
-Add a product to the cart and amend the quantity
+**Add a product to the cart and amend the quantity**
 1. Click on a products Quantity field and choose a number from 1 to 5. 
 2. Verify that the numebr appears in the cart icon in the navbar. 
 3. Add another product and verify that the amount in the cart icon is added and is showing the exact number of added products.
@@ -172,13 +170,13 @@ Add a product to the cart and amend the quantity
 5. Click on the Quantity field in the table and verify that the amount is changing in the table after clicking the amend button.
 6. Try and amend the products to 0, and verify that a text appears that says that the cart is empty, and a button that suggests to go back to the shop page.
 
-Checkout page functionality
+**Checkout page functionality**
 1. Verify that you can see an overview of your products you added to the cart.
 2. Fill in the textfields in the form, and verify that the Required textmessage appears when leaving a field out and try to submit, try one by one.
 3. When you will fill in the fields for the numbers, the credit card nr, the CVV nr, **please note** that there is a bug here, described in the Bugs section.
 4. If you fill in all the fields, you get the message that the payment was successful. If you leave one of those two fields out, you Also get a message that the payment was successful, and the test payment went through and registered on the Stripe website in the Test data.
 
-Inspire page functionality. Add, Edit and View.
+**Inspire page functionality. Add, Edit and View.**
 1. Click on the Inspire page in the navbar.
 2. Verify that you land on the Inspire page where you get three main options.
 3. Firstly, click on the button View inspiration to see the content in an own page. There you get two options; To click on the Back to Inspire page button and to click on the Edit inspiration button.
@@ -190,25 +188,25 @@ Inspire page functionality. Add, Edit and View.
 9. Fill out the fields and click on Add inspiration button. Verify that you are redirected to the View Inspiration page, where you can read the post you just created and again are presented with the two button options to Go back to Inspire page and Edit Inspiration.
 10. At last, click on Go back to Inspire page and verify that the new post has been added. 
 
-Blog page. View posts.
+**Blog page. View posts.**
 1. Click on Blog in the Navbar.
 2. Confirm that you see the blogposts displayed in a sort of liststyle with cards that stick together.
 3. Click on the button Read more and verify that you are redirected to a page where you can reag the full blogpost.
 4. Click on the button Go back to Blog and verify that you are now on the main Blog page again.
 
-Log in form
+**Log in form**
 1. Click on Login in the navbar
 2. On the Login page fill in the username and password fields.
 3. Click on the Login button and verify that you are getting a success message that tells you that you are logged in. 
 4. Go to the Profile page that now shows in the navbar and confirm that your user name and email is displayed along with the information about what you can do as logged in.
 
-Register form
+**Register form**
 1. Click on Register in the navbar. 
 2. Fill in the fields, and try and leave one out, one by one at a time, to verify that a text shows that says that you have to fill in that empty field.
 3. Click on the Register button and verify that you get a message that tells you that you are now registered and logged in, and that you are redirected to the index page.
 4. Go to the Profile page that now shows in the navbar and confirm that your user name and email is displayed along with the information about what you can do as logged in.
 
-Contact form
+**Contact form**
 1. Click on the Contact page in the navbar.
 2. Fill in the fields, verify that they are required by leaving one out at a time, and see that a text shows that says that you have to fill in that empty field.
 3. Click on the Send button and verify that you are getting a message that says that your message has been sent.
@@ -217,8 +215,8 @@ Contact form
 * Example of an error message I got from the console when adding blogposts from the backend logged in as admin. The error message from the running link from the development environment: """Failed to load resource: the server responded with a status of 404 ()  blogpostimg3-min.jpg'):1""" and the error message showed in the console when running the app from Heroku: "GET https://handcrafted-heart.herokuapp.com/url('https://handcrafted-heart.s3.amazonaws.com/media/images/blogpostimg1-min.jpg') 404 (Not Found)" The images is stored in the images file in the AWS S3 Bucket and was not showing at first. 
 * The register form to register a new user was at first not functioning. After filled out all of the required fields, and clicked the submit button nothing happend, only that the two password fields cleaned up empty, but no successmessage was shown.
 
-* One bug discovered not yet solved is that when you leave one field out in the payment form, leaving one of the number fields out, for example the CVV field, the form is submitted anyway, and you get a success message that the payment was successful. 
-1. This is not yet solved. As the fields in the form in the forms.py file in the checkout app was set to required=False, I tried to change these to True. This though, gave an error message that the payment was not successful. 
+* **One bug discovered not yet solved** is that when you leave one field out in the payment form, leaving one of the number fields out, for example the CVV field, the form is submitted anyway, and you get a success message that the payment was successful. 
+1. As the fields in the form in the forms.py file in the checkout app was set to required=False, I tried to change these to True. This though, gave an error message that the payment was not successful. 
 2. I tried to add `required` to the html code, but as the forms are loaded with `payment_form | as_bootstrap` with no input fields, adding the required did not make any difference.
 3. Which result in that it´s currently possible to pay with Stripe´s test functionality with all fields filled in, but also with one of the number fields Not filled in. 
 
@@ -277,7 +275,6 @@ and then modified for my own needs.
 
 ### Media
 * On this webpage I´m using jpg images from [Unsplash](https://unsplash.com/), according to their [Unsplash licence](https://unsplash.com/license).
-* 
 
 ### Acknowledgements
-* For the.. 
+*  
