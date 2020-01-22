@@ -195,8 +195,12 @@ different product descriptions. */
 
 /*---------- Footer --------------*/
 
+.page-footer {
+    background-color: #cccccc;
+    justify-content: center;
+    text-align: center;
+}
+
 .footer-details a {
     color: #6c757d;
-    text-decoration: none;
-    background-color: transparent;
 }
