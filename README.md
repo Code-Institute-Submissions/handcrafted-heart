@@ -15,17 +15,18 @@ To buy warm products knitted by hand and to get inspiration through the blog and
 ### Design process
 After doing research looking at websites with knitted products I found that there where no pages dedicated only to.. which is a gap I wanted to fill. I wanted to narrow this search down to..  My goals with the design was set to:
 
-* To make the design suitable for people who wants to find knitted products in an easy way. I wanted to do this with a stylistic and easily understandable design with warm colors and buttons with clear directions.
+* To make the design suitable for people who wants to find knitted products in an easy way. I wanted to do this with a stylistic and easily understandable design with discrete and warm colors, and buttons with clear directions.
 * To make a web application with several pages, each with it´s clear purpose, and this with a user friendly and easy layout for the user to quick be able to understand what you can do and how.
 * The fonts from Google Fonts that I chose to use for this website `Alegreya', serif` provides an artistic feeling, but are at the same time easy to read, which I think suits the purpose of the page and it´s audience.
 * I chose to use..
 * 
 * I chose the name of the page to be Handcrafted heart, which are supposed to give the customers a personal and warm experience when visiting the page, also some of the products descriptions are a bit more warm and personal to enrich this experience.
 
-Add the color design choices here:
-* Color for the navbar: #f9d5bb
-* Color for the footer: 
-* * Color for the carousel: 
+My discrete & warm color design choices goes well together with the background image, and are listed here:
+
+Color for the navbar | Color for the footer | Color for the Featured items carousel
+--- | --- | ---
+#f9d5bb | #cccccc | #f6f4e6
 
 ### Wireframes
 The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. All of the pages are showed as I planned them and one example of mobile view can be found on the last page in the document. [Check them out here!](add link to the wireframes)
