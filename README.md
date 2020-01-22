@@ -1,8 +1,6 @@
 [![Build Status](https://travis-ci.org/LivHed/handcrafted-heart.svg?branch=master)](https://travis-ci.org/LivHed/handcrafted-heart)
 # Handcrafted heart 
-This is my Milestone Project 4: Full Stack Frameworks with Django - Code Institute.
-
-The idea of this web page is that.. My aim is that..
+**This is my Milestone Project 4: Full Stack Frameworks with Django - Code Institute**
 
 This page is made for an imaginary shop owner from Sweden, Sarah, a small business owner who makes knitted handcrafted products and sell them. The purpose of the products are for warming during winter time up north.
 To buy warm products knitted by hand and to get inspiration through the blog and to share inspiration of yout own is all combined in this web application.
@@ -13,7 +11,7 @@ To buy warm products knitted by hand and to get inspiration through the blog and
 ## UX
 
 ### Design process
-After doing research looking at websites with knitted products I found that there where no pages dedicated only to.. which is a gap I wanted to fill. I wanted to narrow this search down to..  My goals with the design was set to:
+After doing research looking at webshops owned by a small business owner, selling knitted products or similar crafts, I set my goals with the design to this:
 
 * To make the design suitable for people who wants to find knitted products in an easy way. I wanted to do this with a stylistic and easily understandable design with discrete and warm colors, and buttons with clear directions.
 * To make a web application with several pages, each with it´s clear purpose, and this with a user friendly and easy layout for the user to quick be able to understand what you can do and how.
@@ -54,8 +52,8 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * Green alert messages are showing underneath the navbar when a user have been logged in, logged out, have registered, have payed, have sent an email. 
 * When a user add a product to the cart with the Add button in the Shop page the number of items are showing in the cart in the navbar. Every time the quantity is changed the number in the cart are directly corrected.
 * A carousel with 3 images showing Featured products on the landing page. Just to get a small glimpse of what the shop offers.
-* 
-* 
+* In the footer there are three icons included, Facebook, Instagram and Pinterest, which would be the pages to follow the shop owner on if she was a real person. These pages are chosed because a small shop owner with creative products to show would most likely want to show them in images on these social media channels (or similar) to reach out to more customers, and to inspire.
+
 
 #### Features left I would like to Implement
 * In the future I want the users to be able to add comments to the shop owners blogposts, and possibly also stars to vote for the most inspirational posts.
@@ -90,8 +88,6 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * I used [Compressed JPEG](https://compressjpeg.com/) to compress images to take up less space in the S3 Bucket. 
 * [This](https://favicon.io/favicon-generator/) is the page where I generated the favicon from. 
 * I have used [Cripsy forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html) for the contact form, and django-forms for the other forms.
-
-
 
 
 #### Databases
@@ -210,6 +206,15 @@ I used Responsinator to check the responsiveness of the page.
 1. Click on the Contact page in the navbar.
 2. Fill in the fields, verify that they are required by leaving one out at a time, and see that a text shows that says that you have to fill in that empty field.
 3. Click on the Send button and verify that you are getting a message that says that your message has been sent.
+
+***Reset Password functionality***
+* If you have created an account, Go to Login Page, click on the text Forgot my password.
+* Verify that you are redirected to a page that instructs you to enter your email adress.
+* Go to your email and follow the link that is provided, to reset your password.
+* Verify that you are redirected to a link with the page that tells you to Enter your password twice, as instructed.
+* If it´s not working, for example you have entered the password that you used when you registered, verify that you get an error message that you did not succeed.
+* If worked, verify that you get the message that the password reset was complete, and that a link shows up, that gets you to the Login page when clicked on.
+* Now verify that you can log in with your new password. 
 
 ### Automated testing
 I have included [Travis CI](https://travis-ci.org/) in the project. Although as today there is only one simple test included. This is something I want to integrate fully later on with more advanced tests, and in the next project: from the start. 
