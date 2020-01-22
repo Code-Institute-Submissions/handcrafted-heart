@@ -211,6 +211,9 @@ I used Responsinator to check the responsiveness of the page.
 2. Fill in the fields, verify that they are required by leaving one out at a time, and see that a text shows that says that you have to fill in that empty field.
 3. Click on the Send button and verify that you are getting a message that says that your message has been sent.
 
+### Automated testing
+I have included [Travis CI](https://travis-ci.org/) in the project. Although as today there is only one simple test included. This is something I want to integrate fully later on with more advanced tests, and in the next project: from the start. 
+
 ### Bugs I came across while creating the site and while testing it
 * Example of an error message I got from the console when adding blogposts from the backend logged in as admin. The error message from the running link from the development environment: """Failed to load resource: the server responded with a status of 404 ()  blogpostimg3-min.jpg'):1""" and the error message showed in the console when running the app from Heroku: "GET https://handcrafted-heart.herokuapp.com/url('https://handcrafted-heart.s3.amazonaws.com/media/images/blogpostimg1-min.jpg') 404 (Not Found)" The images is stored in the images file in the AWS S3 Bucket and was not showing at first. 
 * The register form to register a new user was at first not functioning. After filled out all of the required fields, and clicked the submit button nothing happend, only that the two password fields cleaned up empty, but no successmessage was shown.
