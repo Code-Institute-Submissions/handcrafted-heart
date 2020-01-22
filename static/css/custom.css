@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya&display=swap');
 
+html, body {
+  height: 100%;
+}
+
 body {
     font-family: 'Alegreya', serif;
     padding-top: 55px; 
+    display: flex;
+    flex-direction: column;
 }
 
+/* .container-fluid {
+    flex: 1 0 auto;
+} */
 
-/*-------Navbar ------- */
+
+/*-------Navbar ------------------------------------------------------ */
 
 .navbar {
     background-color: #f9d5bb;
@@ -29,18 +39,18 @@ body {
 }
 
 
-/*--------- Background image -----------*/
+/*--------- Background image ---------------------------------------------*/
 
 .bg_image {
     background: url("/static/img/background.jpg") no-repeat center center fixed;
     background-color: #f5f6fa;;
     background-size: cover;
-    height: 100vh;
     width: 100%;
     margin: auto;
     z-index: 1;
     padding: 0px;
     overflow: hidden;
+    flex: 1 0 auto;
         
 }
 
@@ -65,20 +75,20 @@ body {
     overflow: hidden;
     top: 0;
     left: 0;
-    height: 100vh;
     width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 
-/*---------- About Me section --------- */
+/*---------- About Me section ---------------------------------------- */
  .about_section {
     padding: 50px 20px;
 } 
 
 
 
-/*------ Featured Products section ------------------ */
+/*------ Featured Products section ----------------------------------- */
 
 /*-----images for featured products row-----*/
 
@@ -106,14 +116,14 @@ body {
 
 
 
-/*---------- Register and Login forms ---------*/
+/*---------- Register and Login forms -----------------------------------*/
 .accountform {
     padding-top: 20px;
     padding-bottom: 30px;
 }
 
 
-/*------------Shop and Cart page content-------------------- */
+/*------------Shop and Cart page content---------------------------------- */
 
 
 /*--- Search btn ----*/
@@ -180,25 +190,26 @@ different product descriptions. */
 }
 
 
-/*---------- Contact form ---------*/
+/*---------- Contact form -------------------------------------------*/
 
 .contact_btn {
     margin-bottom: 15px;
 }
 
 
-/*----------- Blog image -----------*/
+/*----------- Blog image ----------------------------------------------*/
 
 .img-fluid {
     align-content: center;
 }
 
-/*---------- Footer --------------*/
+/*---------- Footer ---------------------------------------------------*/
 
 .page-footer {
     background-color: #cccccc;
     justify-content: center;
     text-align: center;
+    flex-shrink: 0;
 }
 
 .footer-details a {
