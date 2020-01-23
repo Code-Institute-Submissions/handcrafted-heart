@@ -25,7 +25,7 @@ Color for the navbar | Color for the footer | Color for the Featured items carou
 #f9d5bb | #cccccc | #f6f4e6
 
 ### Wireframes
-The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. All of the pages are showed as I planned them  on computer sized screens. And examples are also included of some of the pages on mobile view. [Check them out here!](add link to the wireframes)
+The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. All of the pages are showed as I planned them  on computer sized screens. And examples are also included of 3 of the pages on mobile view. [Check them out here!](https://github.com/LivHed/handcrafted-heart/blob/master/wireframes/BalsamiqMockup5n3.pdf)
 
 ### User stories
 1. As a person living up north, for example in Sweden, I would like to find knitted products to keep me warm during the winter season. 
