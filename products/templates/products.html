@@ -21,15 +21,12 @@
         <div class="display text-center">
             <form action="{% url 'search' %}" method="get">
                 <input class="rounded" type="text" name="q" placeholder="Search for Products here..">
-                <button type="search" class="btn btn-info btn-sm">Search</button>
+                <button type="submit" class="btn btn-info btn-sm">Search</button>
             </form>
         </div>
     </div>
 </div>
-{% endblock %}
-
-
-{% block content %}
+{% endblock %} {% block content %}
 <!-- Button to view all products, visible on all screen sizes -->
 <div class="row justify-content-center">
     <div class="col-12 text-center d-block">
@@ -49,7 +46,7 @@
             <form method="post" action="{% url 'add_to_cart' product.id %}">
                 {% csrf_token %}
                 <div class="input-group">
-                    <input name="quantity" type="number" min="1" max="5" class="form-control" placeholder="Quantity" required="true">
+                    <input name="quantity" type="number" min="1" max="5" class="form-control" placeholder="Quantity" required>
                     <span class="input-group-btn">
                         <button class="btn btn-success" type="submit">Add</button>
                     </span>
