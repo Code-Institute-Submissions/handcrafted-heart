@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 <!-- Page title here -->
-{% block page_title %}Edit Inspiration | Handcrafted heart{% endblock %}
+{% block page_title %}View Inspiration | Handcrafted heart{% endblock %}
 
 <!-- Page heading here -->
 {% block page_heading %}
@@ -15,11 +15,11 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row justify-content-center text-light"">
+    <div class="row justify-content-center text-dark bg-light ml-3 mr-3 mb-4 rounded">
         <div class=""col-lg-8 mb-5">
-            <h3 class="text-center">{{ inspiration.title }}</h3>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 mb-5 text-light text-center">
+            <h3 class="text-center mt-3 mb-3">{{ inspiration.title }}</h3>
+            <div class="row justify-content-center bg-light text-dark ml-1 mr-1">
+                <div class="col-lg-8 mb-5 mt-3 text-dark text-center">
                     <p>{{ inspiration.content }}</p>
                     <a href="{% url 'get_inspiration' %}" class="btn btn-info mb-3">Back to Inspire Page</a>
                     <a href="{% url 'edit_inspiration' inspiration.id %}" class="btn btn-info mb-3">Edit Inspiration</a>

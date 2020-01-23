@@ -38,8 +38,8 @@
         <div class="card mb-3 w-75 mx-auto">
                 <h5 class="card-header">Inspiration</h5>
                 <div class="card-body">
-                <h5 class="card-title">{{ inspiration.title }}</h5>
-                <p class="card-text">{{ inspiration.content }}</p>
+                <h5 class="card-title text-center">{{ inspiration.title }}</h5>
+                <p class="card-text text-center">{{ inspiration.content }}</p>
                 <div class="card-footer text-muted">{{ inspiration.published_date }}</div>
                 <a href="{% url 'edit_inspiration' inspiration.id %}" class="btn btn-sm btn-info">Edit Inspiration</a>
                 <a href="{% url 'inspiration_content' inspiration.id %}" class="btn btn-sm btn-info">View Inspiration</a>
