@@ -61,7 +61,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * If I have had more time I would also have wanted to add a commenting system for the users Inspiration posts on the Inspire page to give eachother feedback and start discussions. 
 * Add a message on the Shop page "No products found that matched the word you searched for" when a user have searched for a word, such as hockey, that does not match any products.
 * Add a message if a user tries to register with an email that another user already uses for an account. When trying this now, nothing happends, the page just remains the same. I want to add an error message here that tells the user that the email already exists for another user account. 
-
+* I want to add pagination to the products page. As for now, there are only 12 products added in the products page. The reason for this is because the products are made by hand by the shop owner, and the range of products she can offer are limited, but pagination added would be great for when the amount of products can increase over time as the business grows.
 
 ## Technologies Used
 #### Languages
@@ -140,8 +140,9 @@ How I meet these needs:
 - how I validated python..
 
 ### The responsiveness of the website
-I used Responsinator to check the responsiveness of the page.
+I used Chrome DevTools to check the responsiveness of the page.
 
+- I tried to try out the web applications responsiveness on [Am I responsive](http://ami.responsivedesign.is/) and [Responsinator](http://www.responsinator.com/) but my page did not load. This is because of security settings on Heroku for the project.
 - The webpage is responsive since I´m using Bootstrap 4 and it works good on smaller devices too. Yhe navbar collapse on smaller views with a standard navbar icon for smaller devices.
 - The title of the page inside of the navbar in the top left corner works in a responsive way with the navbar and takes the user back to the landing page when it´s clicked on.
 - 
@@ -217,7 +218,7 @@ I used Responsinator to check the responsiveness of the page.
 * Now verify that you can log in with your new password. 
 
 ### Automated testing
-I have included [Travis CI](https://travis-ci.org/) in the project. Although as today there is only one simple test included. This is something I want to integrate fully later on with more advanced tests, and in the next project: from the start. 
+I have included [Travis CI](https://travis-ci.org/) in the project. Although as for now there is only one simple test included. This is something I want to integrate fully later on with more advanced tests, and in the next project: from the start. 
 
 ### Bugs I came across while creating the site and while testing it
 * Example of an error message I got from the console when adding blogposts from the backend logged in as admin. The error message from the running link from the development environment: """Failed to load resource: the server responded with a status of 404 ()  blogpostimg3-min.jpg'):1""" and the error message showed in the console when running the app from Heroku: "GET https://handcrafted-heart.herokuapp.com/url('https://handcrafted-heart.s3.amazonaws.com/media/images/blogpostimg1-min.jpg') 404 (Not Found)" The images is stored in the images file in the AWS S3 Bucket and was not showing at first. 
@@ -285,4 +286,4 @@ and then modified for my own needs.
 * On this webpage I´m using jpg images from [Unsplash](https://unsplash.com/), according to their [Unsplash licence](https://unsplash.com/license).
 
 ### Acknowledgements
-*  
+* My mentor, the tutors and the Slack community within Code Institute have been very helpful during the development of this project and for the issues discovered and solved during. Thank you! 
