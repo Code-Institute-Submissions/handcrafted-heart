@@ -25,13 +25,12 @@ Color for the navbar | Color for the footer | Color for the Featured items carou
 #f9d5bb | #cccccc | #f6f4e6
 
 ### Wireframes
-The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. All of the pages are showed as I planned them and one example of mobile view can be found on the last page in the document. [Check them out here!](add link to the wireframes)
+The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. All of the pages are showed as I planned them  on computer sized screens. And examples are also included of some of the pages on mobile view. [Check them out here!](add link to the wireframes)
 
 ### User stories
 1. As a person living up north, for example in Sweden, I would like to find knitted products to keep me warm during the winter season. 
 2. As a person interested in knitting I would like to have a look at someone elses creations and buy a product to wear something inspiring. I also want to get inspiration from a blog, and share my own knowledge of this craft.
 3. As a creative, mindful person living up north I would rather buy handmade knitted products to support small local business owners with a personal touch, instead of buying products from big companies. 
-
 
 ## Features
 #### Existing Features
@@ -62,6 +61,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * Add a message on the Shop page "No products found that matched the word you searched for" when a user have searched for a word, such as hockey, that does not match any products.
 * Add a message if a user tries to register with an email that another user already uses for an account. When trying this now, nothing happends, the page just remains the same. I want to add an error message here that tells the user that the email already exists for another user account. 
 * I want to add pagination to the products page. As for now, there are only 12 products added in the products page. The reason for this is because the products are made by hand by the shop owner, and the range of products she can offer are limited, but pagination added would be great for when the amount of products can increase over time as the business grows.
+* In the future I want to add that when you have successfully paid, you get redirected to a page where you can display your order details, with products, shipping destination and date ordered. This would also be viewable in the users Profile page.
 
 ## Technologies Used
 #### Languages
