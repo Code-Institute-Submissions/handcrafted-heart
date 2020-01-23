@@ -21,9 +21,10 @@
 <div class="row bg-light text-dark mb-2 ml-1 mr-1 rounded">
 
     <!-- Cart content displayed in a table-->
-    <div class="col-12 col-md-8 col-lg-10 mx-auto">
+    <div class="col-xs-12 col-md-8 col-lg-10 mx-auto">
         {% if product_count > 0 %}
-        <table class="table">
+        <div class="table-responsive-xs">
+        <table class="table media-q table-sm">
             <thead class="border-bottom align-left inline-block">
                 <tr>
                     <th scope="col" class="pl-1 border-0 bg-light table_center align-left inline-block">
@@ -55,8 +56,8 @@
                     </th>
                     <td class="p-0 col border-0 border-secondary inline-block align-middle table_center text-dark"><strong>€ {{ item.product.price }}</strong></td>
                     <td class="p-0 col border-0 inline-block align-middle table_center text-dark"><strong>{{item.quantity}}</strong></td>
-                    <td class="p-0 col border-0 inline-block align-middle table_center mr-3">
-                        <form class="text-center border-0 align-middle mr-3" method="post" action="{% url 'adjust_cart' item.id %}">
+                    <td class="pl-0 pr-2 col border-0 inline-block align-middle table_center mr-3">
+                        <form class="text-center border-0 align-middle" method="post" action="{% url 'adjust_cart' item.id %}">
                             {% csrf_token %}
                             <div class="form-group mb-3">
                                 <label for="InputAmount" class="sr-only">Change Qty</label>
@@ -67,7 +68,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-warning"><span aria-hidden="true"></span>Amend</button>
-                            <div class="text-muted"><small>Or remove by changing the qty to 0</small></div>
+                            <div class="text-muted align-left"><small>Or remove by changing the qty to 0</small></div>
                         </form>
                     </td>
                 </tr>
@@ -76,6 +77,7 @@
             </tbody>
 
         </table>
+         </div>
         
         <!-- Order Summary -->
         <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold border-bottom">Order summary </div>
