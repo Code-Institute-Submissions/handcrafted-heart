@@ -40,7 +40,7 @@
                         <div class="p-2 px-3 text-uppercase">Product</div>
                     </th>
                     <th scope="col" class="border-0 bg-light table_center">
-                        <div class="py-2 text-uppercase">Price</div>
+                        <div class="py-2 text-uppercase">Total Price</div>
                     </th>
                     <th scope="col" class="border-0 bg-light table_center">
                         <div class="py-2 text-uppercase">Quantity</div>
@@ -83,7 +83,7 @@
         <div id="alert-message block-message error" id="stripe-error-message"></div>
     </div>
 
-    <!-- the forms put side by side on medium screen sizes and bigger -->
+    <!-- the forms put on top of each other, so it looks like one form -->
     <div class="form-group col-md-12">
         {{ order_form | as_bootstrap }}
     </div>
