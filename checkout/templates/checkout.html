@@ -72,32 +72,32 @@
 
 <!-- The forms required for the checkout process -->
 <div class="row justify-content-center text-dark mb-2 ml-2 mr-2">
-    <div class="col-md-12 mx-auto bg-light rounded">
+  <div class="col-md-12 mx-auto bg-light rounded">
 <!-- the order form and the payment form with a submit button -->
-<form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
-    <legend>Payment Details</legend>
-    {% csrf_token %}
+    <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+        <legend>Payment Details</legend>
+        {% csrf_token %}
     
-    <!-- returns any credit card error message  -->
-    <div id="credit-card-errors" style="display: none;">
+        <!-- returns any credit card error message  -->
+        <div id="credit-card-errors" style="display: none;">
         <div id="alert-message block-message error" id="stripe-error-message"></div>
-    </div>
+        </div>
 
-    <!-- the forms put on top of each other, so it looks like one form -->
-    <div class="form-group col-md-12">
-        {{ order_form | as_bootstrap }}
-    </div>
+        <!-- the forms put on top of each other, so it looks like one form -->
+        <div class="form-group col-md-12">
+          {{ order_form | as_bootstrap }}
+        </div>
 
-    <div class="form-group col-md-12">
-        {{ payment_form | as_bootstrap }}
-    </div>
+        <div class="form-group col-md-12">
+          {{ payment_form | as_bootstrap }}
+        </div>
 
-    {% csrf_token %}
-    <div class="form-group col-md-12">
-        <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
-    </div>
-</form>
-</div>
+        {% csrf_token %}
+        <div class="form-group col-md-12">
+           <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+        </div>
+    </form>
+  </div>
 </div>
 
 {% endblock %}

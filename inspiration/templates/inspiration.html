@@ -1,5 +1,4 @@
-{% extends 'base.html' %}
-{% load bootstrap_tags %}
+{% extends 'base.html' %} {% load bootstrap_tags %}
 
 
 <!-- Page title here -->
@@ -8,53 +7,52 @@
 <!-- Page heading here -->
 {% block page_heading %}
 <div class="row justify-content-center">
-   <div class="col-12">
+    <div class="col-12">
         <!-- Page Headline, so the user knows which page they are on -->
         <br>
         <h2 class="text-white text-center">Knitting Inspiration</h2>
     </div>
 </div>
-{% endblock %}
-
+{% endblock %} 
 
 {% block content %}
-
 <div class="row">
     <div class="col-md-12">
-  <!-- Title section  -->  
+        <!-- Title section so the users knows what to expect on this page -->
         <h3 class="text-center text-light">Share your knowledge</h3>
-        <p class="text-light text-center mx-auto w-75">Let´s share that rich knitting knowledge to inspire one another. 
-        If you have any advice, tips & trix or patterns you want to share with us all, just go for it! Here you can 
-        View Inspiration, Edit inspiration and Add new Inspiration.</p>
+          <p class="text-light text-center mx-auto w-75">Let´s share that rich knitting knowledge to inspire one another. 
+          If you have any advice, tips & trix or patterns you want to share with us all, just go for it! 
+          Here you can View Inspiration, Edit inspiration and Add new Inspiration.</p>
     </div>
 </div>
 
 
 <div class="row">
     <div class="col-md-12">
-        
-    <!-- Here the user can see the shared Inspiration -->
-    {% for inspiration in inspirations %}
+
+        <!-- Here the user can see the shared Inspiration and the buttons for viewing and editing posts -->
+        {% for inspiration in inspirations %}
         <div class="card mb-3 w-75 mx-auto">
-                <h5 class="card-header">Inspiration</h5>
-                <div class="card-body">
+            <h5 class="card-header">Inspiration</h5>
+            <div class="card-body">
                 <h5 class="card-title text-center">{{ inspiration.title }}</h5>
                 <p class="card-text text-center">{{ inspiration.content }}</p>
                 <div class="card-footer text-muted">{{ inspiration.published_date }}</div>
                 <a href="{% url 'edit_inspiration' inspiration.id %}" class="btn btn-sm btn-info">Edit Inspiration</a>
                 <a href="{% url 'inspiration_content' inspiration.id %}" class="btn btn-sm btn-info">View Inspiration</a>
-                </div>
+            </div>
         </div>
-    {% endfor %}
-       
-                        
+        {% endfor %}
+
+
     </div>
 </div>
-    
+
+<!-- Button for the user to be able to Add Inspiration-->
 <div class="row justify-content-center">
     <div class="col-12 text-center d-block">
-       <!-- Button to add inspiration  -->
-       <a href="{% url 'add_inspiration' %}" class="btn btn-info rounded-1 btn-md justify-content-center mb-3">Add New Inspiration</a>
+        <!-- Button to add inspiration  -->
+        <a href="{% url 'add_inspiration' %}" class="btn btn-info rounded-1 btn-md justify-content-center mb-3">Add New Inspiration</a>
     </div>
 </div>
 

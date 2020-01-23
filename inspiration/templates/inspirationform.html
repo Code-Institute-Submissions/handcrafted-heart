@@ -1,5 +1,4 @@
-{% extends "base.html" %}
-{% load bootstrap_tags %}
+{% extends "base.html" %} {% load bootstrap_tags %}
 
 <!-- Page title here -->
 {% block page_title %}Add Inspiration | Handcrafted heart{% endblock %}
@@ -7,7 +6,7 @@
 <!-- Page heading here -->
 {% block page_heading %}
 <div class="row justify-content-center">
-   <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6">
         <!-- Page Headline, so the user knows which page they are on -->
         <br>
         <h2 class="text-light text-center">Add some Inspiration</h2>
@@ -15,17 +14,14 @@
 </div>
 {% endblock %}
 
-<!-- Add Inspiration form -->
+<!-- The Add Inspiration form -->
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-lg-8 mb-5">
-    <form class="text-light" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form | as_bootstrap }}
-        <button type="submit" class="btn btn-info rounded-1">Add Inspiration</button>
-    </form>
+        <form class="text-light" method="POST" enctype="multipart/form-data">
+            {% csrf_token %} {{ form | as_bootstrap }}
+            <button type="submit" class="btn btn-info rounded-1">Add Inspiration</button>
+        </form>
     </div>
 </div>
-
-
 {% endblock %}

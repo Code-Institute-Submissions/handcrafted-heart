@@ -19,19 +19,19 @@
 {% block content %}
  <div class="row justify-content-center text-dark ml-2 mr-2">
         <!-- Blog Posts column -->
-              <div class="col-lg-8 mb-5 bg-light mb-1 rounded">
-                  {% for post in posts %}
+             <div class="col-lg-8 mb-5 bg-light mb-1 rounded">
+                 {% for post in posts %}
                     <h1 class="mt-4">{{ post.title }}</h1>
                     <hr>
                     
                     <p> {{ post.published_date }} </p>
                     <img class="img-fluid" src="{{ MEDIA_URL }}{{ post.image }}">
-                     <hr> 
+                    <hr> 
             
                     <p class="lead text-center">{{ post.content|truncatewords:30 }}</p>
                     <p><a href="{% url 'post_details' post.id %}"  class="btn btn-info rounded-1 mb-2">Read more</a></p>
                  {% endfor %}
-              </div>
+            </div>
  </div>
     
 {% endblock %}
