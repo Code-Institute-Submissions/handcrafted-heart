@@ -28,7 +28,7 @@
                     <img class="img-fluid" src="{{ MEDIA_URL }}{{ post.image }}">
                      <hr> 
             
-                    <p class="lead">{{ post.content|truncatewords:30 }}</p>
+                    <p class="lead text-center">{{ post.content|truncatewords:30 }}</p>
                     <p><a href="{% url 'post_details' post.id %}"  class="btn btn-info rounded-1 mb-2">Read more</a></p>
                  {% endfor %}
               </div>
