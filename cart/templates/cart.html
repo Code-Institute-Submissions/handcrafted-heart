@@ -24,20 +24,20 @@
     <div class="col-xs-12 col-md-8 col-lg-10 mx-auto">
         {% if product_count > 0 %}
         <div class="table-responsive-xs">
-        <table class="table media-q table-sm">
+        <table class="table">
             <thead class="border-bottom align-left inline-block">
                 <tr>
-                    <th scope="col" class="pl-1 border-0 bg-light table_center align-left inline-block">
-                        <div class="text-uppercase">Product</div>
+                    <th scope="col" class="p-1 border-0 bg-light inline-block">
+                        <div class="text-uppercase text-center">Product</div>
                     </th>
-                    <th scope="col" class="pl-1 border-0 bg-light table_center align-left inline-block">
-                        <div class="text-uppercase">Price</div>
+                    <th scope="col" class="p-1 border-0 bg-light inline-block">
+                        <div class="text-uppercase text-center">Price</div>
                     </th>
-                    <th scope="col" class="pl-1 border-0 bg-light table_center align-left inline-block">
-                        <div class="text-uppercase">Quantity</div>
+                    <th scope="col" class="p-1 border-0 bg-light inline-block pr-2">
+                        <div class="text-uppercase text-center">Quantity</div>
                     </th>
-                    <th scope="col" class="pl-1 border-0 bg-light table_center align-left inline-block">
-                        <div class="text-uppercase">Amend Order</div>
+                    <th scope="col" class="p-1 border-0 bg-light inline-block">
+                        <div class="text-uppercase text-center">Amend Order</div>
                     </th>
                 </tr>
             </thead>
@@ -46,18 +46,18 @@
                 <!-- A for loop that runs through all items in the cart -->
                 {% for item in cart_items %}
                 <tr>
-                    <th scope="row" class="border-0 table_left">
-                        <div class="p-2">
+                    <th scope="row" class="border-0">
+                        <div class="p-1">
                             <img src="{{ MEDIA_URL }}{{ item.product.image }}" alt="product" width="70" class="img-fluid rounded shadow-sm">
-                            <div class="ml-3 d-inline-block align-middle">
-                                <div class="mb-0 d-inline-block align-middle text-dark text-small">{{ item.product.name }}</div>
+                            <div class="inline-block align-middle">
+                                <div class="mb-0 inline-block align-middle text-dark text-small">{{ item.product.name }}</div>
                             </div>
                         </div>
                     </th>
-                    <td class="p-0 col border-0 border-secondary inline-block align-middle table_center text-dark"><strong>€ {{ item.product.price }}</strong></td>
-                    <td class="p-0 col border-0 inline-block align-middle table_center text-dark"><strong>{{item.quantity}}</strong></td>
-                    <td class="pl-0 pr-2 col border-0 inline-block align-middle table_center mr-3">
-                        <form class="text-center border-0 align-middle" method="post" action="{% url 'adjust_cart' item.id %}">
+                    <td class="p-0 col border-0 border-secondary inline-block text-center align-middle text-dark"><strong>€ {{ item.product.price }}</strong></td>
+                    <td class="pr-1 col border-0 inline-block align-middle text-center text-dark"><strong>{{item.quantity}}</strong></td>
+                    <td class="p-0 col border-0 inline-block text-center align-middle mr-3">
+                        <form class="text-center border-0" method="post" action="{% url 'adjust_cart' item.id %}">
                             {% csrf_token %}
                             <div class="form-group mb-3">
                                 <label for="InputAmount" class="sr-only">Change Qty</label>
