@@ -5,15 +5,18 @@
 This page is made for an imaginary shop owner from Sweden, Sarah, a small business owner who makes knitted handcrafted products and sell them. The purpose of the products are for warming during winter time up north.
 To buy warm products knitted by hand and to get inspiration through the blog and to share inspiration of yout own is all combined in this web application.
 [Check it out here!](https://handcrafted-heart.herokuapp.com/)
---------
 
-Here´s acouple of images of the landing page and the Blog page to show how Handcrafted heart can look like on different screens sizes:
 
-To show images from the page on different screen sizes                                                 |  Captured in Chrome DevTools
+***Here´s a couple of images of the landing page and the Blog page to show how Handcrafted heart can look like on different screens sizes:***
+
+From the landing page                                                                                  |  Captured in Chrome DevTools
 :-----------------------------------------------------------------------------------------------------:|:-------------------------:
 ![LandingPage1](https://github.com/LivHed/handcrafted-heart/blob/master/static/img/presentation1.PNG)  |  ![LandingPage2](https://github.com/LivHed/handcrafted-heart/blob/master/static/img/presentation2.PNG)
 
-![Examples of the pages](https://github.com/LivHed/handcrafted-heart/blob/master/static/img/presentation1.PNG "Handcrafted heart imgs")
+From the Blog page                                                                                     |  Captured in Chrome DevTools
+:-----------------------------------------------------------------------------------------------------:|:-------------------------:
+![BlogPage1](https://github.com/LivHed/handcrafted-heart/blob/master/static/img/presentation3.PNG)     |  ![BlogPage2](https://github.com/LivHed/handcrafted-heart/blob/master/static/img/presentation4.PNG)
+
 
 ## UX
 
