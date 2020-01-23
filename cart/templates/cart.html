@@ -18,25 +18,25 @@
 {% block content %}
 
 <!-- Shopping cart -->
-<div class="row justify-content-center bg-light text-dark mb-2 ml-1 mr-1 rounded">
+<div class="row bg-light text-dark mb-2 ml-1 mr-1 rounded">
 
     <!-- Cart content displayed in a table-->
     <div class="col-12 col-md-8 col-lg-10 mx-auto">
         {% if product_count > 0 %}
         <table class="table">
-            <thead class="border-bottom">
+            <thead class="border-bottom align-left inline-block">
                 <tr>
-                    <th scope="col" class="border-0 bg-light table_center">
-                        <div class="p-2 px-3 text-uppercase">Product</div>
+                    <th scope="col" class="pl-1 border-0 bg-light table_center align-left inline-block">
+                        <div class="text-uppercase">Product</div>
                     </th>
-                    <th scope="col" class="border-0 bg-light table_center">
-                        <div class="py-2 text-uppercase">Price</div>
+                    <th scope="col" class="pl-1 border-0 bg-light table_center align-left inline-block">
+                        <div class="text-uppercase">Price</div>
                     </th>
-                    <th scope="col" class="border-0 bg-light table_center">
-                        <div class="py-2 text-uppercase">Quantity</div>
+                    <th scope="col" class="pl-1 border-0 bg-light table_center align-left inline-block">
+                        <div class="text-uppercase">Quantity</div>
                     </th>
-                    <th scope="col" class="border-0 bg-light table_center">
-                        <div class="py-2 text-uppercase">Amend Order</div>
+                    <th scope="col" class="pl-1 border-0 bg-light table_center align-left inline-block">
+                        <div class="text-uppercase">Amend Order</div>
                     </th>
                 </tr>
             </thead>
@@ -49,20 +49,20 @@
                         <div class="p-2">
                             <img src="{{ MEDIA_URL }}{{ item.product.image }}" alt="product" width="70" class="img-fluid rounded shadow-sm">
                             <div class="ml-3 d-inline-block align-middle">
-                                <h5 class="mb-0 d-inline-block align-middle text-dark">{{ item.product.name }}</h5>
+                                <div class="mb-0 d-inline-block align-middle text-dark text-small">{{ item.product.name }}</div>
                             </div>
                         </div>
                     </th>
-                    <td class="border-0 border-secondary align-middle table_center text-dark"><strong>€ {{ item.product.price }}</strong></td>
-                    <td class="border-0 align-middle table_center text-dark"><strong>{{item.quantity}}</strong></td>
-                    <td class="border-0 align-middle table_center">
-                        <form class="text-center border-0 p-2" method="post" action="{% url 'adjust_cart' item.id %}">
+                    <td class="p-0 col border-0 border-secondary inline-block align-middle table_center text-dark"><strong>€ {{ item.product.price }}</strong></td>
+                    <td class="p-0 col border-0 inline-block align-middle table_center text-dark"><strong>{{item.quantity}}</strong></td>
+                    <td class="p-0 col border-0 inline-block align-middle table_center mr-3">
+                        <form class="text-center border-0 align-middle mr-3" method="post" action="{% url 'adjust_cart' item.id %}">
                             {% csrf_token %}
                             <div class="form-group mb-3">
                                 <label for="InputAmount" class="sr-only">Change Qty</label>
                                 <div class="input-group">
                                     <div class="input-group-addon"></div>
-                                    <input name="quantity" type="number" min="0" max="5" class="form-control" required="true" placeholder="Quantity">
+                                    <input name="quantity" type="number" min="0" max="5" class="form-control" placeholder="Qty" required>
                                     <div class="input-group-addon"></div>
                                 </div>
                             </div>
@@ -76,6 +76,7 @@
             </tbody>
 
         </table>
+        
         <!-- Order Summary -->
         <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold border-bottom">Order summary </div>
         <div class="p-4">
@@ -95,8 +96,9 @@
         <a class="btn btn-info btn-lg btn-block mb-3" href="{% url 'all_products' %}" role="button">The Cart is empty - Return to
             Shop</a>
             </div>
+    
+        {% endif %}
     </div>
-    {% endif %}
 </div>
 
 {% endblock %}
